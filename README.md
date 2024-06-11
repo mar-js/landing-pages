@@ -1,1 +1,1 @@
-# landing-pages
+# Landing Pages
