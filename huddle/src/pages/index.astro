@@ -1,19 +1,22 @@
 ---
+import { Image } from 'astro:assets';
+import Hero from '@components/Hero.astro';
+import MainBtn from '@components/MainBtn.astro';
+import MainImage from '@images/screen-mockups.svg';
 import Layout from '@layouts/Layout.astro';
+import Main from '@layouts/Main.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>asdas</main>
+	<Main>
+		<Hero />
+		<MainBtn />
+		<Image
+			src={MainImage}
+			alt="Main image"
+		/>
+	</Main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
 </style>
