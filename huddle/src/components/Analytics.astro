@@ -1,0 +1,20 @@
+---
+import AnalyticCard from '@components/AnalyticCard.astro';
+import IconCommunities from '@images/icon-communities.svg';
+import IconMessages from '@images/icon-messages.svg';
+---
+
+<div>
+  <AnalyticCard icon={IconCommunities} title="1.4k+" description="Communities Formed" />
+  <AnalyticCard icon={IconMessages} title="2.7m+" description="Messages Sent" />
+</div>
+
+<style>
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-inline: 6.2rem;
+  }
+</style>
