@@ -7,16 +7,6 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
-/*
-Headings
-	Family: Poppins
-	Weights: 700
-
-Body
-	Family: Open Sans
-	Weights: 400, 600, 700
-	*/
 ---
 
 <!doctype html>
@@ -53,10 +43,17 @@ Body
 	html {
 		background-color: var(--very-pale-blue);
 		color: var(--very-dark-cyan);
+		font-size: 10px;
+	}
+
+	body {
+		margin: 0 auto;
+		max-width: 150rem;
+		padding: 7rem 7rem 9rem;
 	}
 
 	h1,h2,h3,h4,h5,h6 {
-		font-family: var(--typography-body-open-sans);
+		font-family: var(--typography-headings-poppins);
 		font-weight: 700;
 	}
 
