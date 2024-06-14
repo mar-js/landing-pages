@@ -11,7 +11,7 @@ const { title, description, image, reverse, bgImage } = Astro.props
   }}>
   {bgImage && <img class="image top" src={bgImage.top} alt={title} />}
   <div class="content" style={{ flexDirection: reverse ? "row-reverse" : "row" }}>
-    <div style={{ padding: reverse ? "0 0 0 40rem" : "0 40rem 0 0" }}>
+    <div style={{ width: "50rem" }}>
       <h5 class="title">{title}</h5>
       <p class="description">{description}</p>
     </div>
@@ -45,13 +45,13 @@ const { title, description, image, reverse, bgImage } = Astro.props
 
   .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
 
   .title {
     margin-bottom: 1.5rem;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
 
   .description {
