@@ -1,24 +1,24 @@
 ---
-import { Image } from 'astro:assets';
-import Analytics from '@components/Analytics.astro';
-import Hero from '@components/Hero.astro';
-import MainBtn from '@components/MainBtn.astro';
-import MainImage from '@images/screen-mockups.svg';
-import Layout from '@layouts/Layout.astro';
-import Main from '@layouts/Main.astro';
+import { Image } from "astro:assets"
+import Analytics from "@components/Analytics.astro"
+import Hero from "@components/Hero.astro"
+import Informations from "@components/Informations.astro"
+import MainBtn from "@components/MainBtn.astro"
+import MainImage from "@images/screen-mockups.svg"
+import Layout from "@layouts/Layout.astro"
+import Main from "@layouts/Main.astro"
+import Section from "@layouts/Section.astro"
 ---
 
 <Layout title="Welcome to Astro.">
-	<Main>
-		<Hero />
-		<MainBtn />
-		<Image
-			src={MainImage}
-			alt="Main image"
-		/>
-		<Analytics ⁄>
-	</Main>
+  <Main>
+    <Hero />
+    <MainBtn />
+    <Image src={MainImage} alt="Main image" />
+  </Main>
+  <Section stylesSection={{ paddingInline: "10rem" }}>
+    <Analytics ⁄ />
+  </Section>
 </Layout>
 
-<style>
-</style>
+<style></style>
