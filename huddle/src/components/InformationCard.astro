@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets"
+
+const { title, description, image, reverse, bgImage } = Astro.props
+---
+
+<article
+  class="information-card-container"
+  style={{
+    backgroundColor: reverse ? "#ffffff" : "var(--very-pale-blue)"
+  }}>
+  {bgImage && <img class="image top" src={bgImage.top} alt={title} />}
+  <div class="content" style={{ flexDirection: reverse ? "row-reverse" : "row" }}>
+    <div style={{ padding: reverse ? "0 0 0 40rem" : "0 40rem 0 0" }}>
+      <h5 class="title">{title}</h5>
+      <p class="description">{description}</p>
+    </div>
+    <Image src={image} alt={title} width={500} height={400} />
+  </div>
+  {bgImage && <img class="image bottom" src={bgImage.bottom} alt={title} />}
+</article>
+
+<style>
+  .information-card-container {
+    padding: 4rem 8rem;
+    margin: 25rem -8rem;
+    position: relative;
+  }
+
+  .image {
+    position: absolute;
+    width: 100%;
+    height: 15rem;
+    left: 0;
+    right: 0;
+  }
+
+  .top {
+    top: -150px;
+  }
+
+  .bottom {
+    bottom: -150px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+</style>
