@@ -3,7 +3,6 @@ import { Image } from "astro:assets"
 import Analytics from "@components/Analytics.astro"
 import Hero from "@components/Hero.astro"
 import Informations from "@components/Informations.astro"
-import MainBtn from "@components/MainBtn.astro"
 import MainImage from "@images/screen-mockups.svg"
 import Layout from "@layouts/Layout.astro"
 import Main from "@layouts/Main.astro"
@@ -12,8 +11,10 @@ import Section from "@layouts/Section.astro"
 
 <Layout title="Welcome to Astro.">
   <Main>
-    <Hero />
-    <MainBtn />
+    <Hero
+      title="Build The Community Your Fans Will Love"
+      description="Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion."
+    />
     <Image src={MainImage} alt="Main image" />
   </Main>
   <Section stylesSection={{ paddingInline: "10rem" }}>
@@ -21,6 +22,9 @@ import Section from "@layouts/Section.astro"
   </Section>
   <Section>
     <Informations />
+  </Section>
+  <Section stylesSection={{ textAlign: "center" }}>
+    <Hero title="Ready to Build Your Community?" />
   </Section>
 </Layout>
 
