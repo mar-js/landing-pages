@@ -1,11 +1,14 @@
 ---
 import { Image } from "astro:assets"
 import Analytics from "@components/Analytics.astro"
+import Form from "@components/Form.astro"
 import FreeBtn from "@components/FreeBtn.astro"
 import Hero from "@components/Hero.astro"
 import Informations from "@components/Informations.astro"
 import Logo from "@components/Logo.astro"
+import Socials from "@components/Socials.astro"
 import MainImage from "@images/screen-mockups.svg"
+import Footer from "@layouts/Footer.astro"
 import Header from "@layouts/Header.astro"
 import Layout from "@layouts/Layout.astro"
 import Main from "@layouts/Main.astro"
@@ -33,6 +36,10 @@ import Section from "@layouts/Section.astro"
   <Section stylesSection={{ textAlign: "center" }}>
     <Hero title="Ready to Build Your Community?" />
   </Section>
+  <Footer>
+    <Socials />
+    <Form />
+  </Footer>
 </Layout>
 
 <style></style>
