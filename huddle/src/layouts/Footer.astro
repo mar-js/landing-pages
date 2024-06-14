@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets"
+import waveFooter from "@images/bg-footer-top-desktop.svg"
+---
+
+<footer class="footer">
+  <Image class="wave" src={waveFooter} alt="Wave footer" />
+  <div class="container">
+    <slot />
+  </div>
+</footer>
+
+<style>
+  .footer {
+    position: relative;
+    background-color: var(--very-dark-cyan);
+    margin-top: 30rem;
+    margin-inline: -8rem;
+    padding-block: 14rem 4rem;
+  }
+
+  .wave {
+    position: absolute;
+    width: 100%;
+    height: 15rem;
+    left: 0;
+    right: 0;
+    top: -15rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
