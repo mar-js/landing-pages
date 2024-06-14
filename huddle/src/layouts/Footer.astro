@@ -3,7 +3,7 @@ import { Image } from "astro:assets"
 import waveFooter from "@images/bg-footer-top-desktop.svg"
 ---
 
-<footer class="footer">
+<footer class="footer-container">
   <Image class="wave" src={waveFooter} alt="Wave footer" />
   <div class="container">
     <slot />
@@ -11,7 +11,7 @@ import waveFooter from "@images/bg-footer-top-desktop.svg"
 </footer>
 
 <style>
-  .footer {
+  .footer-container {
     position: relative;
     background-color: var(--very-dark-cyan);
     margin-top: 30rem;

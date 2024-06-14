@@ -2,12 +2,12 @@
 const { stylesSection } = Astro.props
 ---
 
-<section style={stylesSection}>
+<section class="section-container" style={stylesSection}>
   <slot />
 </section>
 
 <style>
-  section {
+  .section-container {
     margin-block: 10rem;
   }
 </style>
