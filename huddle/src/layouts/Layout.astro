@@ -1,75 +1,83 @@
 ---
-import '@fontsource/poppins';
-import '@fontsource-variable/open-sans';
+import "@fontsource/poppins"
+import "@fontsource-variable/open-sans"
 
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--pink: #ff52bf;
-		--light-pink: #ff8fd8;
-		--light-red: #ff4242;
-		--very-dark-cyan: #00252e;
-		--very-pale-blue: #f5faff;
-		--typography-headings-poppins: 'Poppins', sans-serif;
-		--typography-body-open-sans: 'Open Sans Variable', sans-serif;
-	}
+  :root {
+    --pink: #ff52bf;
+    --light-pink: #ff8fd8;
+    --light-red: #ff4242;
+    --very-dark-cyan: #00252e;
+    --very-pale-blue: #f5faff;
+    --typography-headings-poppins: "Poppins", sans-serif;
+    --typography-body-open-sans: "Open Sans Variable", sans-serif;
+  }
 
-	*, *::before, *::after {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-	html {
-		background-color: var(--very-pale-blue);
-		color: var(--very-dark-cyan);
-		font-size: 10px;
-	}
+  html {
+    background-color: white;
+    color: var(--very-dark-cyan);
+    font-size: 10px;
+  }
 
-	body {
-		margin: 0 auto;
-		max-width: 150rem;
-		padding: 7rem 7rem 9rem;
-	}
+  body {
+    margin: 0 auto;
+    max-width: 150rem;
+    padding: 6rem 6rem 0;
+  }
 
-	h1,h2,h3,h4,h5,h6 {
-		font-family: var(--typography-headings-poppins);
-		font-weight: 700;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--typography-headings-poppins);
+    font-weight: 700;
+  }
 
-	p, span, button {
-		font-family: var(--typography-body-open-sans);
-	}
+  h6,
+  p,
+  span,
+  button,
+  a {
+    font-family: var(--typography-body-open-sans);
+  }
 
-	span {
-		font-weight: 400;
-	}
+  button {
+    cursor: pointer;
+  }
 
-	p {
-		font-weight: 600;
-	}
+  @media (width <= 670px) {
+    html {
+      font-size: 9px;
+    }
 
-	button {
-		font-weight: 700;
-	}
+    body {
+      padding: 4rem 4rem 0;
+    }
+  }
 </style>
