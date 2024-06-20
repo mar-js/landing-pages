@@ -28,4 +28,15 @@ const { title, description } = Astro.props
     font-size: 2rem;
     margin-bottom: 4.5rem;
   }
+
+  @media (width <= 670px) {
+    .title {
+      font-size: 3rem;
+    }
+
+    .description {
+      width: 100%;
+      font-size: 1.5rem;
+    }
+  }
 </style>
