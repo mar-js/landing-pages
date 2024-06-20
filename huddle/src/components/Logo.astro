@@ -6,7 +6,17 @@ const { alternative } = Astro.props
 ---
 
 <Image
+  class="logo"
   style={{ filter: alternative ? "invert(1) sepia(1) saturate(0) hue-rotate(175deg)" : "none" }}
   src={logo}
   alt="Logo Huddle"
 />
+
+<style>
+  @media (width <= 670px) {
+    .logo {
+      width: 20rem;
+      height: 3rem;
+    }
+  }
+</style>
