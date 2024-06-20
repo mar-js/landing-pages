@@ -11,11 +11,11 @@ const { title, description, image, reverse, bgImage } = Astro.props
   }}>
   {bgImage && <img class="image top" src={bgImage.top} alt={title} />}
   <div class="content" style={{ flexDirection: reverse ? "row-reverse" : "row" }}>
-    <div style={{ width: "50rem" }}>
+    <div class="content-text">
       <h5 class="title">{title}</h5>
       <p class="description">{description}</p>
     </div>
-    <Image src={image} alt={title} width={500} height={400} />
+    <Image class="content-image" src={image} alt={title} />
   </div>
   {bgImage && <img class="image bottom" src={bgImage.bottom} alt={title} />}
 </article>
@@ -23,7 +23,7 @@ const { title, description, image, reverse, bgImage } = Astro.props
 <style>
   .information-card-container {
     padding: 4rem 8rem;
-    margin: 25rem -8rem;
+    margin: 25rem -6rem;
     position: relative;
   }
 
@@ -47,6 +47,11 @@ const { title, description, image, reverse, bgImage } = Astro.props
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .content-text {
+    width: 50rem;
   }
 
   .title {
@@ -56,5 +61,11 @@ const { title, description, image, reverse, bgImage } = Astro.props
 
   .description {
     font-size: 1.5rem;
+  }
+
+  .content-image {
+    width: 50rem;
+    height: 40rem;
+    margin-block: 2rem;
   }
 </style>
