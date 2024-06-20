@@ -26,4 +26,14 @@ const { icon, title, description } = Astro.props
     color: var(--very-dark-cyan);
     opacity: 0.5;
   }
+
+  @media (width <= 900px) {
+    .analytic-card-container {
+      justify-content: center;
+    }
+
+    .analytic-card-container:first-child {
+      margin-bottom: 15rem;
+    }
+  }
 </style>
