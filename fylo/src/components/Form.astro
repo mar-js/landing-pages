@@ -1,0 +1,44 @@
+---
+const { formBtn, placeholder, widthInput } = Astro.props
+---
+
+<form id={formBtn} action="POST" class="form-container">
+  <input
+    class="input"
+    style={{ width: widthInput }}
+    type="email"
+    name="email"
+    id="email"
+    placeholder={placeholder}
+  />
+  <button class="button" form={formBtn} type="submit">Get Started</button>
+</form>
+
+<style>
+  .form-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .input {
+    padding: 1.5rem 2rem;
+  }
+
+  .input::placeholder {
+    color: var(--light-gray);
+  }
+
+  .button {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--bright-blue);
+    padding: 1.5rem 5rem;
+  }
+
+  .button:hover {
+    opacity: 0.5;
+  }
+</style>
