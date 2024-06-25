@@ -1,0 +1,53 @@
+---
+import "@fontsource/raleway"
+import "@fontsource/open-sans"
+
+const { title } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --very-dark-blue: #070439;
+    --desaturated-blue: #585989;
+    --bright-blue: #3065f8;
+    --moderate-cyan: #3c9f8f;
+    --light-grayish-blue: #f6f6fe;
+    --light-gray: #bfbfbf;
+
+    --typography-headings-raleway: "Raleway", sans-serif;
+    --typography-body-open-sans: "Open Sans", sans-serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: var(--light-grayish-blue);
+    color: var(--very-dark-blue);
+    font-size: 10px;
+  }
+
+  body {
+    margin: 0 auto;
+    max-width: 150rem;
+    padding: 6rem 6rem 0;
+  }
+</style>
