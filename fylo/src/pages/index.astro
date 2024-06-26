@@ -1,11 +1,13 @@
 ---
 import Hero from "@components/Hero.astro"
 import Logo from "@components/Logo.astro"
+import Mentions from "@components/Mentions.astro"
 import Menu from "@components/Menu.astro"
 import Header from "@layouts/Header.astro"
 import Layout from "@layouts/Layout.astro"
 import Main from "@layouts/Main.astro"
 import Nav from "@layouts/Nav.astro"
+import Section from "@layouts/Section.astro"
 ---
 
 <Layout title="Fylo | Home">
@@ -18,4 +20,7 @@ import Nav from "@layouts/Nav.astro"
   <Main>
     <Hero />
   </Main>
+  <Section>
+    <Mentions />
+  </Section>
 </Layout>
