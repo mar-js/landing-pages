@@ -14,18 +14,24 @@ const { title, description } = Astro.props
   }
 
   .title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem;
   }
 
   .description {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
   }
 
   @media (width <= 1000px) {
     .contents-container {
       width: 100%;
+    }
+  }
+
+  @media (width <= 670px) {
+    .contents-container {
+      text-align: center;
     }
   }
 </style>
