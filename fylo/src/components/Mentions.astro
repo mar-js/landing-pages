@@ -1,0 +1,101 @@
+---
+import { Image } from "astro:assets"
+import wave from "@images/bg-curve-desktop.svg"
+import arrow from "@images/icon-arrow.svg"
+import imageHero from "@images/illustration-2.svg"
+import Contents from "./Contents.astro"
+import Mention from "./Mention.astro"
+---
+
+<div class="mentions-container">
+  <img class="wave" src={wave.src} alt="Wave" />
+  <Contents
+    title="Stay productive, wherever you are"
+    description="Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs. Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!">
+    <div class="anchor-container">
+      <a class="anchor" href="/">See how Fylo works</a>
+      <Image class="arrow" src={arrow} alt="Arrow" />
+    </div>
+    <Mention />
+  </Contents>
+  <Image class="image" src={imageHero} alt="Image hero" />
+</div>
+
+<style>
+  .mentions-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem 2rem;
+    margin: 0 -6rem;
+    padding: 6rem;
+    background-color: var(--light-grayish-blue);
+    margin-top: 20rem;
+  }
+
+  .wave {
+    position: absolute;
+    width: 100%;
+    height: 15rem;
+    top: -15rem;
+    left: 0;
+    right: 0;
+  }
+
+  .anchor-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 1rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16.3rem;
+      height: 0.2rem;
+      bottom: -1rem;
+      background-color: var(--moderate-cyan);
+    }
+  }
+
+  .anchor {
+    font-size: 1.5rem;
+    color: var(--moderate-cyan);
+    text-decoration: none;
+
+    &:visited {
+      color: var(--moderate-cyan);
+    }
+  }
+
+  .image {
+    width: 40%;
+    height: 40rem;
+  }
+
+  @media (width <= 1000px) {
+    .mentions-container {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+
+    .anchor-container {
+      justify-content: center;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (width <= 670px) {
+    .mentions-container {
+      padding: 4rem;
+      margin: 20rem -4rem 0;
+    }
+  }
+</style>
