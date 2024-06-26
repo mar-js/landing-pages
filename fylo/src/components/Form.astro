@@ -1,5 +1,5 @@
 ---
-const { formBtn, placeholder, widthInput } = Astro.props
+const { formBtn, placeholder, widthInput, textBtn } = Astro.props
 ---
 
 <form id={formBtn} action="POST" class="form-container">
@@ -11,7 +11,7 @@ const { formBtn, placeholder, widthInput } = Astro.props
     id="email"
     placeholder={placeholder}
   />
-  <button class="button" form={formBtn} type="submit">Get Started</button>
+  <button class="button" form={formBtn} type="submit">{textBtn}</button>
 </form>
 
 <style>
@@ -44,6 +44,7 @@ const { formBtn, placeholder, widthInput } = Astro.props
 
   @media (width <= 670px) {
     .form-container {
+      width: 100%;
       flex-direction: column;
     }
 
