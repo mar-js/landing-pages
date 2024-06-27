@@ -8,9 +8,9 @@ const { title, description } = Astro.props
 
 <div class="hero-container">
   <h2 class="title">{title}</h2>
-  {description && <p class="description">{description}</p>}
+  <p class="description">{description}</p>
   <MainBtn />
-  {description && <Image class="image-hero" src={MainImage} alt="Main image" />}
+  <Image class="image-hero" src={MainImage} alt="Main image" />
 </div>
 
 <style>
@@ -46,7 +46,7 @@ const { title, description } = Astro.props
 
   @media (width <= 670px) {
     .title {
-      font-size: 3rem;
+      font-size: 4rem;
     }
 
     .description {
