@@ -1,9 +1,12 @@
 ---
 import Conections from "@components/Conections.astro"
+import Contacts from "@components/Contacts.astro"
 import Hero from "@components/Hero.astro"
+import Links from "@components/Links.astro"
 import Logo from "@components/Logo.astro"
 import Mentions from "@components/Mentions.astro"
 import Menu from "@components/Menu.astro"
+import Footer from "@layouts/Footer.astro"
 import Header from "@layouts/Header.astro"
 import Layout from "@layouts/Layout.astro"
 import Main from "@layouts/Main.astro"
@@ -27,4 +30,18 @@ import Section from "@layouts/Section.astro"
   <Section>
     <Conections />
   </Section>
+  <Footer>
+    <Logo alternative />
+    <div class="footer-content">
+      <Contacts />
+      <Nav>
+        <Links />
+      </Nav>
+      <div style="width: 30rem;">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis numquam dolor iusto nobis
+        harum iste, quisquam omnis temporibus facere voluptatum ad nisi sapiente ullam, adipisci
+        corrupti nulla? Sit, recusandae magnam!
+      </div>
+    </div>
+  </Footer>
 </Layout>
