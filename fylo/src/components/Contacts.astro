@@ -7,11 +7,11 @@ import phone from "@images/icon-phone.svg"
   <ul class="contact">
     <li class="contact-item">
       <img src={phone.src} alt="Phone" />
-      <span class="contact-text">Phone: +1-543-123-4567</span>
+      <a class="contact-text" href="tel:+1-543-123-4567">Phone: +1-543-123-4567</a>
     </li>
     <li class="contact-item">
       <img src={email.src} alt="Phone" />
-      <span class="contact-text">example@fylo.com</span>
+      <a class="contact-text" href="mailto:example@fylo.com">example@fylo.com</a>
     </li>
   </ul>
 </div>
@@ -23,7 +23,6 @@ import phone from "@images/icon-phone.svg"
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
-    color: var(--light-grayish-blue);
   }
 
   .contact {
@@ -43,6 +42,8 @@ import phone from "@images/icon-phone.svg"
   }
 
   .contact-text {
+    color: var(--light-gray);
     font-size: 1.5rem;
+    text-decoration: none;
   }
 </style>
