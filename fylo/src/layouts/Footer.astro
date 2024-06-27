@@ -1,0 +1,30 @@
+<footer class="footer-container">
+  <slot />
+</footer>
+
+<style is:global>
+  .footer-container {
+    margin: 0 -6rem;
+    padding: 10rem 6rem;
+    background-color: var(--very-dark-blue);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5rem;
+    margin-top: 2rem;
+  }
+
+  @media (width <= 670px) {
+    .footer-container {
+      padding-inline: 4rem;
+      margin: 0 -4rem;
+    }
+
+    .footer-content {
+      flex-direction: column;
+    }
+  }
+</style>
