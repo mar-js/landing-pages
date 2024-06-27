@@ -1,6 +1,12 @@
 ---
 import { Image } from "astro:assets"
 import logo from "@images/logo.svg"
+
+const { alternative } = Astro.props
 ---
 
-<Image class="logo" src={logo} alt="Logo" />
+<Image
+  style={{ filter: alternative ? "invert(1) sepia(1) saturate(0) hue-rotate(175deg)" : "none" }}
+  src={logo}
+  alt="Logo"
+/>
