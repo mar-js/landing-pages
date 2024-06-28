@@ -2,15 +2,14 @@
 import { Image } from "astro:assets"
 
 const { title, description, image, reverse, bgImage } = Astro.props
+
+const bgColor = reverse ? "#ffffff" : "var(--very-pale-blue)"
+const flexDir = reverse ? "row-reverse" : "row"
 ---
 
-<article
-  class="information-card-container"
-  style={{
-    backgroundColor: reverse ? "#ffffff" : "var(--very-pale-blue)"
-  }}>
+<article class="information-card-container">
   {bgImage && <img class="image top" src={bgImage.top} alt={title} />}
-  <div class="content" style={{ flexDirection: reverse ? "row-reverse" : "row" }}>
+  <div class="content">
     <div class="content-text">
       <h5 class="title">{title}</h5>
       <p class="description">{description}</p>
@@ -20,11 +19,12 @@ const { title, description, image, reverse, bgImage } = Astro.props
   {bgImage && <img class="image bottom" src={bgImage.bottom} alt={title} />}
 </article>
 
-<style>
+<style define:vars={{ bgColor, flexDir }}>
   .information-card-container {
     padding: 4rem 8rem;
     margin: 25rem -6rem;
     position: relative;
+    background-color: var(--bgColor);
   }
 
   .image {
@@ -45,6 +45,7 @@ const { title, description, image, reverse, bgImage } = Astro.props
 
   .content {
     display: flex;
+    flex-direction: var(--flexDir);
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
