@@ -3,18 +3,11 @@ const { formBtn, placeholder, widthInput, textBtn } = Astro.props
 ---
 
 <form id={formBtn} action="POST" class="form-container">
-  <input
-    class="input"
-    style={{ width: widthInput }}
-    type="email"
-    name="email"
-    id="email"
-    placeholder={placeholder}
-  />
+  <input class="input" type="email" name="email" id="email" placeholder={placeholder} />
   <button class="button" form={formBtn} type="submit">{textBtn}</button>
 </form>
 
-<style>
+<style define:vars={{ widthInput: widthInput ?? "auto" }}>
   .form-container {
     display: flex;
     justify-content: flex-start;
@@ -24,6 +17,7 @@ const { formBtn, placeholder, widthInput, textBtn } = Astro.props
   }
 
   .input {
+    width: var(--widthInput);
     padding: 1.5rem 2rem;
   }
 
