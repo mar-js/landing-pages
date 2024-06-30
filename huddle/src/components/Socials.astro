@@ -1,8 +1,12 @@
 ---
 import { Image } from "astro:assets"
+import Logo from "@components/Logo.astro"
+import facebook from "@images/facebook-fill.svg"
 import email from "@images/icon-email.svg"
 import phone from "@images/icon-phone.svg"
-import Logo from "./Logo.astro"
+import instagram from "@images/instagram.svg"
+import twitter from "@images/twitter-fill.svg"
+import Networks from "./Networks.astro"
 ---
 
 <div class="socials-container">
@@ -19,13 +23,13 @@ import Logo from "./Logo.astro"
     <Image src={email} alt="Email" />
     <span class="contact-text">example@huddle.com</span>
   </div>
-  <div class="networks">asdas</div>
+  <Networks icons={{ facebook, instagram, twitter }} />
 </div>
 
 <style>
   .socials-container {
     width: 30rem;
-    color: #ffffff;
+    color: var(--very-pale-blue);
   }
 
   .description {
@@ -41,10 +45,6 @@ import Logo from "./Logo.astro"
   .contact-text {
     opacity: 0.8;
     margin-left: 1.5rem;
-  }
-
-  .networks {
-    margin-top: 6rem;
   }
 
   @media (width <= 1000px) {
