@@ -3,6 +3,10 @@ import Hero from "@components/Hero.astro"
 import Logo from "@components/Logo.astro"
 import bgImageDesktop from "@images/bg-desktop.svg"
 import bgImageMobile from "@images/bg-mobile.svg"
+import facebook from "@images/facebook.svg"
+import instagram from "@images/instagram.svg"
+import twitter from "@images/twitter.svg"
+import Networks from "./Networks.astro"
 
 const backgroundImageDesktop = `url(${bgImageDesktop.src})`
 const backgroundImageMobile = `url(${bgImageMobile.src})`
@@ -19,6 +23,7 @@ const backgroundImageMobile = `url(${bgImageMobile.src})`
       description="Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion."
       textBtn="Register"
     />
+    <Networks icons={{ facebook, instagram, twitter }} alternative />
   </div>
 </div>
 
@@ -41,7 +46,6 @@ const backgroundImageMobile = `url(${bgImageMobile.src})`
   .logo-container {
     margin-bottom: 15rem;
   }
-
   @media (width <= 1300px) {
     .image-hero {
       width: 50rem;
@@ -54,7 +58,7 @@ const backgroundImageMobile = `url(${bgImageMobile.src})`
     }
   }
 
-  @media (width <= 670px) {
+  @media (width <= 1000px) {
     .introduction {
       padding: 5rem;
     }
