@@ -1,5 +1,6 @@
 ---
 import Analytics from "@components/Analytics.astro"
+import Community from "@components/Community.astro"
 import Form from "@components/Form.astro"
 import FreeBtn from "@components/FreeBtn.astro"
 import Hero from "@components/Hero.astro"
@@ -13,7 +14,7 @@ import Main from "@layouts/Main.astro"
 import Section from "@layouts/Section.astro"
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Home">
   <Header>
     <Logo />
     <FreeBtn />
@@ -22,16 +23,17 @@ import Section from "@layouts/Section.astro"
     <Hero
       title="Build The Community Your Fans Will Love"
       description="Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion."
+      textBtn="Get Stated For Free"
     />
   </Main>
-  <Section stylesSection={{ paddingInline: "10rem" }}>
+  <Section>
     <Analytics ⁄ />
   </Section>
   <Section>
     <Informations />
   </Section>
-  <Section stylesSection={{ textAlign: "center" }}>
-    <Hero title="Ready to Build Your Community?" />
+  <Section>
+    <Community />
   </Section>
   <Footer>
     <Socials />
