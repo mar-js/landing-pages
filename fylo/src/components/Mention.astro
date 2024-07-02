@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets"
+import avatar from "@images/avatar-testimonial.jpg"
+import quotes from "@images/icon-quotes.svg"
+---
+
+<article class="mention-container">
+  <Image src={quotes} alt="Quotes" />
+  <p class="description">
+    Fylo has improved our team productivity by an order of magnitude. Since making the switch our
+    team has become a well-oiled collaborations machine.
+  </p>
+  <article class="avatar-container">
+    <Image class="avatar" src={avatar} alt="Avatar" />
+    <div>
+      <h5 class="avatar-title">Kyle Burton</h5>
+      <span>Founder & CEO Huddler</span>
+    </div>
+  </article>
+</article>
+
+<style>
+  .mention-container {
+    width: 35rem;
+    height: auto;
+    margin-top: 5rem;
+    padding: 3rem 2.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    box-shadow: 0rem 0rem 1rem var(--light-gray);
+  }
+
+  .description {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .avatar-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 1rem;
+  }
+
+  .avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+
+  .avatar-title {
+    font-size: 1.2rem;
+  }
+
+  @media (width <= 1000px) {
+    .mention-container {
+      text-align: left;
+      width: 100%;
+    }
+
+    .description {
+      font-size: 1.3rem;
+      margin: 1rem 0;
+    }
+  }
+</style>

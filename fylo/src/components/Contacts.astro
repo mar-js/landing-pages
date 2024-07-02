@@ -1,0 +1,49 @@
+---
+import email from "@images/icon-email.svg"
+import phone from "@images/icon-phone.svg"
+---
+
+<div class="contact-container">
+  <ul class="contact">
+    <li class="contact-item">
+      <img src={phone.src} alt="Phone" />
+      <a class="contact-text" href="tel:+1-543-123-4567">Phone: +1-543-123-4567</a>
+    </li>
+    <li class="contact-item">
+      <img src={email.src} alt="Phone" />
+      <a class="contact-text" href="mailto:example@fylo.com">example@fylo.com</a>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .contact-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .contact-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .contact-text {
+    color: var(--light-gray);
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+</style>

@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets"
+import imageHero from "@images/illustration-1.svg"
+import Contents from "./Contents.astro"
+import Form from "./Form.astro"
+---
+
+<div class="hero-container">
+  <Contents
+    title="All your files in one secure location, accessible anywhere"
+    description="Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family and co-workers.">
+    <Form
+      formBtn="hero-action"
+      widthInput="30rem"
+      placeholder="Enter your email..."
+      textBtn="Get Started"
+    />
+  </Contents>
+  <div class="image-container">
+    <Image class="image" src={imageHero} alt="Image hero" />
+  </div>
+</div>
+
+<style>
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .image-container {
+    width: 50rem;
+    height: 50rem;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1133/839;
+  }
+
+  @media (width <= 1000px) {
+    .hero-container {
+      gap: 4rem 0;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+
+    .image-container {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>

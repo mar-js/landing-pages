@@ -1,6 +1,6 @@
 ---
-import "@fontsource/raleway"
-import "@fontsource/open-sans"
+import "@fontsource-variable/raleway"
+import "@fontsource-variable/open-sans"
 
 const { title } = Astro.props
 ---
@@ -24,11 +24,12 @@ const { title } = Astro.props
     --desaturated-blue: #585989;
     --bright-blue: #3065f8;
     --moderate-cyan: #3c9f8f;
-    --light-grayish-blue: #f6f6fe;
+    --light-grayish-blue: #f8f8fe;
     --light-gray: #bfbfbf;
+    --white: #ffffff;
 
-    --typography-headings-raleway: "Raleway", sans-serif;
-    --typography-body-open-sans: "Open Sans", sans-serif;
+    --typography-headings-raleway: "Raleway Variable", sans-serif;
+    --typography-body-open-sans: "Open Sans Variable", sans-serif;
   }
 
   *,
@@ -40,7 +41,7 @@ const { title } = Astro.props
   }
 
   html {
-    background-color: var(--light-grayish-blue);
+    background-color: var(--white);
     color: var(--very-dark-blue);
     font-size: 10px;
   }
@@ -49,5 +50,42 @@ const { title } = Astro.props
     margin: 0 auto;
     max-width: 150rem;
     padding: 6rem 6rem 0;
+  }
+
+  h2,
+  a {
+    font-family: var(--typography-headings-raleway);
+  }
+
+  h5,
+  p,
+  span {
+    font-family: var(--typography-body-open-sans);
+  }
+
+  h2,
+  h5 {
+    font-weight: 700;
+  }
+
+  button,
+  input {
+    border-radius: 0.3rem;
+    outline: none;
+    border: none;
+  }
+
+  input {
+    border: 0.1rem solid var(--very-dark-blue);
+  }
+
+  @media (width <= 670px) {
+    html {
+      font-size: 9px;
+    }
+
+    body {
+      padding: 4rem 4rem 0;
+    }
   }
 </style>
