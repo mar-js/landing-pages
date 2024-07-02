@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets"
+import facebook from "@images/facebook.svg"
+import instagram from "@images/instagram.svg"
+import twitter from "@images/twitter.svg"
+---
+
+<div class="networks-container">
+  <Image class="icon" src={facebook} alt="Facebook" />
+  <Image class="icon" src={instagram} alt="Instagram" />
+  <Image class="icon" src={twitter} alt="Twitter" />
+</div>
+
+<style>
+  .networks-container {
+    width: 30rem;
+    filter: invert(1) sepia(1) saturate(0) hue-rotate(175deg);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 2rem;
+  }
+
+  .icon {
+    border: 0.1rem solid var(--very-dark-blue);
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  @media (width <= 1000px) {
+    .networks-container {
+      width: auto;
+    }
+  }
+
+  @media (width <= 670px) {
+    .networks-container {
+      justify-content: center;
+    }
+  }
+</style>
