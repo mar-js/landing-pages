@@ -4,9 +4,9 @@ import { menuHeader } from "@constants/"
 
 <ul class="items-container">
   {
-    menuHeader.map(({ text }) => (
+    menuHeader.map(({ text, to }) => (
       <li class="item">
-        <a class="link" href="/" target="_self" rel="noopener noreferrer">
+        <a class="link" href={to} target="_self" rel="noopener noreferrer">
           {text}
         </a>
       </li>
@@ -27,6 +27,7 @@ import { menuHeader } from "@constants/"
   }
 
   .link {
+    color: var(--very-dark-blue);
     font-size: 2rem;
     text-decoration: none;
 
