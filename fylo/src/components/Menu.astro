@@ -1,10 +1,14 @@
 ---
 import { menuHeader } from "@constants/"
+
+const { alternative } = Astro.props
+const colorLink = alternative ? "var(--white)" : "var(--very-dark-blue)"
+const linksMenu = menuHeader(alternative)
 ---
 
 <ul class="items-container">
   {
-    menuHeader.map(({ text, to }) => (
+    linksMenu.map(({ text, to }) => (
       <li class="item">
         <a class="link" href={to} target="_self" rel="noopener noreferrer">
           {text}
@@ -14,7 +18,7 @@ import { menuHeader } from "@constants/"
   }
 </ul>
 
-<style>
+<style define:vars={{ colorLink }}>
   .items-container {
     display: flex;
     justify-content: space-between;
@@ -27,12 +31,12 @@ import { menuHeader } from "@constants/"
   }
 
   .link {
-    color: var(--very-dark-blue);
+    color: var(--colorLink);
     font-size: 2rem;
     text-decoration: none;
 
     &:visited {
-      color: var(--very-dark-blue);
+      color: var(--colorLink);
     }
 
     &:hover {
