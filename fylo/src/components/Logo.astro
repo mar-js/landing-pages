@@ -4,8 +4,9 @@ import logoAlternative from "@images/logo-alternative.svg"
 import logo from "@images/logo.svg"
 
 const { alternative } = Astro.props
+const hrefHome = alternative ? "/fylo-dark" : "/"
 ---
 
-<a href="/">
-  <Image class="logo" src={alternative ? logoAlternative : logo} alt="Logo Fylo" />
+<a href={hrefHome}>
+  <Image class="logo" width={160} src={alternative ? logoAlternative : logo} alt="Logo Fylo" />
 </a>
