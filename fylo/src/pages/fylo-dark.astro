@@ -1,5 +1,16 @@
 ---
+import Logo from "@components/Logo.astro"
+import Menu from "@components/Menu.astro"
+import Header from "@layouts/Header.astro"
 import Layout from "@layouts/Layout.astro"
+import Nav from "@layouts/Nav.astro"
 ---
 
-<Layout title="Dark"> --- </Layout>
+<Layout title="Dark" alternative>
+  <Header>
+    <Logo alternative />
+    <Nav>
+      <Menu alternative />
+    </Nav>
+  </Header>
+</Layout>
