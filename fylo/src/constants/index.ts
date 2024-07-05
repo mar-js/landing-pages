@@ -1,9 +1,15 @@
-export const menuHeader = [
-	{
-		id: 0,
-		text: "New design 🚀",
-		to: "/fylo-dark",
-	},
+export const menuHeader = (alternative: boolean) => [
+	alternative
+		? {
+				id: 0,
+				text: "Old design 🏚️",
+				to: "/",
+			}
+		: {
+				id: 0,
+				text: "New design 🏠",
+				to: "/fylo-dark",
+			},
 	{
 		id: 1,
 		text: "Features",
