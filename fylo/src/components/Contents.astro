@@ -1,5 +1,8 @@
 ---
-const { title, description } = Astro.props
+const { alternative, title, description } = Astro.props
+const widthContainer = alternative ? "55%" : "45%"
+const textAlignContainer = alternative ? "center" : "left"
+const opacityDescription = alternative ? ".8" : "0.6"
 ---
 
 <div class="contents-container">
@@ -8,9 +11,10 @@ const { title, description } = Astro.props
   <slot />
 </div>
 
-<style>
+<style define:vars={{ widthContainer, textAlignContainer, opacityDescription }}>
   .contents-container {
-    width: 45%;
+    width: var(--widthContainer);
+    text-align: var(--textAlignContainer);
   }
 
   .title {
@@ -21,7 +25,7 @@ const { title, description } = Astro.props
   .description {
     font-size: 1.6rem;
     margin-bottom: 2rem;
-    opacity: 0.6;
+    opacity: var(--opacityDescription);
   }
 
   @media (width <= 1000px) {
