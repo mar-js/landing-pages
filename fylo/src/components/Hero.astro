@@ -1,15 +1,25 @@
 ---
 import { Image } from "astro:assets"
-import imageHero from "@images/illustration-1.svg"
+import wave from "@images/bg-curvy-desktop.svg"
+import hero from "@images/illustration-1.svg"
+import heroAlternative from "@images/illustration-intro.png"
 import Contents from "./Contents.astro"
 import Form from "./Form.astro"
+
+const { alternative } = Astro.props
+const textColor = alternative ? "var(--light-grayish-blue)" : "var(--very-dark-blue)"
+const imageHero = alternative ? heroAlternative : hero
+const flexDirContainer = alternative ? "column-reverse" : "row"
+const sizeImageContainer = alternative ? "auto" : "50rem"
 ---
 
 <div class="hero-container">
   <Contents
+    alternative={alternative}
     title="All your files in one secure location, accessible anywhere"
     description="Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family and co-workers.">
     <Form
+      alternative={alternative}
       formBtn="hero-action"
       widthInput="30rem"
       placeholder="Enter your email..."
@@ -19,24 +29,38 @@ import Form from "./Form.astro"
   <div class="image-container">
     <Image class="image" src={imageHero} alt="Image hero" />
   </div>
+  {alternative && <img class="wave" src={wave.src} alt="Wave hero" />}
 </div>
 
-<style>
+<style define:vars={{ textColor, flexDirContainer, sizeImageContainer }}>
   .hero-container {
+    position: relative;
     display: flex;
+    flex-direction: var(--flexDirContainer);
     justify-content: space-between;
     align-items: center;
+    color: var(--textColor);
+    gap: 5rem;
   }
 
   .image-container {
-    width: 50rem;
-    height: 50rem;
+    width: var(--sizeImageContainer);
+    height: var(--sizeImageContainer);
   }
 
   .image {
     width: 100%;
     height: 100%;
     aspect-ratio: 1133/839;
+  }
+
+  .wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45rem;
+    z-index: -1;
+    margin-bottom: -5rem;
   }
 
   @media (width <= 1000px) {
@@ -49,6 +73,11 @@ import Form from "./Form.astro"
     .image-container {
       width: 100%;
       height: auto;
+    }
+
+    .wave {
+      margin-left: -6rem;
+      margin-right: -6rem;
     }
   }
 </style>
