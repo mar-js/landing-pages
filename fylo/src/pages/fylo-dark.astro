@@ -1,8 +1,10 @@
 ---
+import Hero from "@components/Hero.astro"
 import Logo from "@components/Logo.astro"
 import Menu from "@components/Menu.astro"
 import Header from "@layouts/Header.astro"
 import Layout from "@layouts/Layout.astro"
+import Main from "@layouts/Main.astro"
 import Nav from "@layouts/Nav.astro"
 ---
 
@@ -13,4 +15,7 @@ import Nav from "@layouts/Nav.astro"
       <Menu alternative />
     </Nav>
   </Header>
+  <Main>
+    <Hero alternative />
+  </Main>
 </Layout>
