@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets"
+const { icon, title, description } = Astro.props
+---
+
+<article class="card-about-us-container">
+  <Image class="icon" src={icon} alt={title} />
+  <h3 class="title">{title}</h3>
+  <p class="description">{description}</p>
+</article>
+
+<style>
+  .card-about-us-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    color: var(--light-grayish-blue);
+  }
+
+  .icon {
+    aspect-ratio: 83 / 78;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.5rem;
+    opacity: 0.8;
+  }
+</style>
