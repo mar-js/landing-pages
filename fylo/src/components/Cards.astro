@@ -1,0 +1,39 @@
+---
+import { cardData } from "@constants/"
+import CardAboutUs from "./CardAboutUs.astro"
+---
+
+<div class="cards-container">
+  {cardData.map((card) => <CardAboutUs {...card} />)}
+</div>
+
+<style>
+  .cards-container {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 10rem 5rem;
+    background-color: var(--dark-blue-secondary);
+    padding: 10rem 20rem;
+  }
+
+  @media (width <= 1200px) {
+    .cards-container {
+      padding-inline: 10rem;
+    }
+  }
+
+  @media (width <= 1000px) {
+    .cards-container {
+      padding: 6;
+      margin-inline: -6rem;
+    }
+  }
+
+  @media (width <= 640px) {
+    .cards-container {
+      padding: 4;
+      margin-inline: -4rem;
+    }
+  }
+</style>
