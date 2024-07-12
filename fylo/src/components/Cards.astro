@@ -10,7 +10,7 @@ import CardAboutUs from "./CardAboutUs.astro"
 <style>
   .cards-container {
     display: grid;
-    place-content: center;
+    place-items: center;
     grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     gap: 10rem 5rem;
     background-color: var(--dark-blue-secondary);
@@ -25,14 +25,14 @@ import CardAboutUs from "./CardAboutUs.astro"
 
   @media (width <= 1000px) {
     .cards-container {
-      padding: 6;
+      padding: 6rem;
       margin-inline: -6rem;
     }
   }
 
   @media (width <= 640px) {
     .cards-container {
-      padding: 4;
+      padding: 4rem;
       margin-inline: -4rem;
     }
   }
