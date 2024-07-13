@@ -2,9 +2,13 @@
 import Analytic from "@components/Analytic.astro"
 import CardFloat from "@components/CardFloat.astro"
 import Cards from "@components/Cards.astro"
+import Contacts from "@components/Contacts.astro"
 import Hero from "@components/Hero.astro"
+import Links from "@components/Links.astro"
 import Logo from "@components/Logo.astro"
 import Menu from "@components/Menu.astro"
+import Networks from "@components/Networks.astro"
+import Footer from "@layouts/Footer.astro"
 import Header from "@layouts/Header.astro"
 import Layout from "@layouts/Layout.astro"
 import Main from "@layouts/Main.astro"
@@ -31,4 +35,14 @@ import Section from "@layouts/Section.astro"
   <Section>
     <CardFloat />
   </Section>
+  <Footer alternative>
+    <Logo alternative />
+    <div class="footer-content">
+      <Contacts alternative />
+      <Nav>
+        <Links />
+      </Nav>
+      <Networks alternative />
+    </div>
+  </Footer>
 </Layout>
