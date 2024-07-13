@@ -7,6 +7,7 @@ const bgColorContainer = alternative ? "var(--dark-blue-primary)" : "var(--white
 const textColorContainer = alternative ? "var(--light-grayish-blue)" : "var(--very-dark-blue)"
 const boxShadowContainer = alternative ? "none" : "0rem 0rem 1rem var(--light-gray)"
 const marginTopContainer = alternative ? "0" : "5rem"
+const opacityText = alternative ? "0.6" : "1"
 ---
 
 <article class="mention-container">
@@ -19,13 +20,19 @@ const marginTopContainer = alternative ? "0" : "5rem"
     <Image class="avatar" src={avatar} alt="Avatar" />
     <div>
       <h5 class="avatar-title">{owner}</h5>
-      <span>Founder & CEO Huddler</span>
+      <span class="avatar-company">Founder & CEO Huddler</span>
     </div>
   </article>
 </article>
 
 <style
-  define:vars={{ marginTopContainer, bgColorContainer, textColorContainer, boxShadowContainer }}
+  define:vars={{
+    marginTopContainer,
+    bgColorContainer,
+    textColorContainer,
+    boxShadowContainer,
+    opacityText
+  }}
 >
   .mention-container {
     width: 35rem;
@@ -42,6 +49,7 @@ const marginTopContainer = alternative ? "0" : "5rem"
   .description {
     font-size: 1.2rem;
     margin: 1rem 0;
+    opacity: var(--opacityText);
   }
 
   .avatar-container {
@@ -59,6 +67,10 @@ const marginTopContainer = alternative ? "0" : "5rem"
 
   .avatar-title {
     font-size: 1.2rem;
+  }
+
+  .avatar-company {
+    opacity: var(--opacityText);
   }
 
   @media (width <= 1000px) {
