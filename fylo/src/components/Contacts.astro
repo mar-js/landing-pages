@@ -1,9 +1,23 @@
 ---
 import email from "@images/icon-email.svg"
+import location from "@images/icon-location.svg"
 import phone from "@images/icon-phone.svg"
+const { alternative } = Astro.props
+const justifyContentContainer = alternative ? "space-between" : "flex-start"
+const flexDirContainer = alternative ? "column" : "row"
 ---
 
 <div class="contact-container">
+  {
+    alternative && (
+      <div class="location-container">
+        <img src={location.src} alt="Location" />
+        <a class="contact-text" href="#">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit, numquam? Quia sint nisi id.
+        </a>
+      </div>
+    )
+  }
   <ul class="contact">
     <li class="contact-item">
       <img src={phone.src} alt="Phone" />
@@ -16,11 +30,10 @@ import phone from "@images/icon-phone.svg"
   </ul>
 </div>
 
-<style>
+<style define:vars={{ justifyContentContainer, flexDirContainer }}>
   .contact-container {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    justify-content: var(--justifyContentContainer);
     align-items: flex-start;
     gap: 2rem;
   }
@@ -34,6 +47,7 @@ import phone from "@images/icon-phone.svg"
     list-style: none;
   }
 
+  .location-container,
   .contact-item {
     display: flex;
     justify-content: flex-start;
@@ -41,9 +55,20 @@ import phone from "@images/icon-phone.svg"
     gap: 2rem;
   }
 
+  .location-container {
+    width: 30rem;
+    align-items: flex-start;
+  }
+
   .contact-text {
     color: var(--light-gray);
     font-size: 1.5rem;
     text-decoration: none;
+  }
+
+  @media (width <= 1200px) {
+    .contact-container {
+      flex-direction: var(--flexDirContainer);
+    }
   }
 </style>
