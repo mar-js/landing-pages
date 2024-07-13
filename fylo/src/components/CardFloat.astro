@@ -1,0 +1,124 @@
+---
+import Btn from "./Btn.astro"
+---
+
+<div class="card-float-container">
+  <div class="top"></div>
+  <div class="card-container">
+    <h3 class="title">Get early access today</h3>
+    <p class="description">
+      It only takes a minute to sign up and our free starter tier is extremely generous. If you have
+      any questions, our support team would be happy to help you.
+    </p>
+    <form class="form-container">
+      <input class="input" type="email" name="email" id="email" placeholder="email@example.com" />
+      <Btn alternative formBtn="hero-action" textBtn="Get Started For Free" />
+    </form>
+  </div>
+  <div class="bottom"></div>
+</div>
+
+<style>
+  .card-float-container {
+    height: 50rem;
+    position: relative;
+  }
+
+  .top,
+  .bottom {
+    height: 50%;
+  }
+
+  .top {
+    background: linear-gradient(
+      to bottom,
+      var(--dark-blue-secondary),
+      var(--light-grayish-blue) 3000%
+    );
+  }
+
+  .card-container {
+    width: 70%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5rem;
+    background-color: var(--dark-blue-third);
+    color: var(--light-grayish-blue);
+    text-align: center;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .description {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+  }
+
+  .bottom {
+    background-color: var(--dark-blue-fourd);
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .input {
+    width: 40rem;
+    padding: 1.5rem 5rem;
+    border-radius: 10rem;
+  }
+
+  .input::placeholder {
+    color: var(--light-gray);
+  }
+
+  @media (width <= 1000px) {
+    .card-float-container {
+      height: 60rem;
+      margin-inline: -6rem;
+    }
+
+    .card-container {
+      width: 90%;
+      height: 40rem;
+      padding: 3.5rem;
+    }
+
+    .form-container {
+      width: 100%;
+      flex-direction: column;
+
+      button {
+        width: 100% !important;
+      }
+    }
+
+    .input {
+      width: 100%;
+    }
+  }
+
+  @media (width <= 670px) {
+    .card-float-container {
+      height: 80rem;
+      margin-inline: -4rem;
+    }
+  }
+</style>
