@@ -1,10 +1,11 @@
 ---
-import Conections from "@components/Conections.astro"
+import Analytic from "@components/Analytic.astro"
+import CardFloat from "@components/CardFloat.astro"
+import Cards from "@components/Cards.astro"
 import Contacts from "@components/Contacts.astro"
 import Hero from "@components/Hero.astro"
 import Links from "@components/Links.astro"
 import Logo from "@components/Logo.astro"
-import Mentions from "@components/Mentions.astro"
 import Menu from "@components/Menu.astro"
 import Networks from "@components/Networks.astro"
 import Footer from "@layouts/Footer.astro"
@@ -15,30 +16,33 @@ import Nav from "@layouts/Nav.astro"
 import Section from "@layouts/Section.astro"
 ---
 
-<Layout title="Home">
+<Layout title="Dark" alternative>
   <Header>
-    <Logo />
+    <Logo alternative />
     <Nav>
-      <Menu />
+      <Menu alternative />
     </Nav>
   </Header>
   <Main>
-    <Hero />
+    <Hero alternative />
   </Main>
   <Section>
-    <Mentions />
+    <Cards />
   </Section>
   <Section>
-    <Conections />
+    <Analytic />
   </Section>
-  <Footer>
+  <Section>
+    <CardFloat />
+  </Section>
+  <Footer alternative>
     <Logo alternative />
     <div class="footer-content">
-      <Contacts />
+      <Contacts alternative />
       <Nav>
         <Links />
       </Nav>
-      <Networks />
+      <Networks alternative />
     </div>
   </Footer>
 </Layout>

@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets"
 import wave from "@images/bg-curve-desktop.svg"
-import arrow from "@images/icon-arrow.svg"
 import imageMention from "@images/illustration-2.svg"
 import Contents from "./Contents.astro"
+import LinkFylo from "./LinkFylo.astro"
 import Mention from "./Mention.astro"
 ---
 
@@ -11,12 +11,10 @@ import Mention from "./Mention.astro"
   <img class="wave" src={wave.src} alt="Wave" />
   <Contents
     title="Stay productive, wherever you are"
-    description="Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs. Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!">
-    <div class="anchor-container">
-      <a class="anchor" href="/">See how Fylo works</a>
-      <Image class="arrow" src={arrow} alt="Arrow" />
-    </div>
-    <Mention />
+    description="Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs."
+    descriptionTwo="Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!">
+    <LinkFylo />
+    <Mention owner="Kyle Burton" />
   </Contents>
   <div class="image-container">
     <Image class="image" src={imageMention} alt="Image hero" />
@@ -41,37 +39,6 @@ import Mention from "./Mention.astro"
     top: -15rem;
     left: 0;
     right: 0;
-  }
-
-  .anchor-container {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0 1rem;
-
-    &:hover {
-      opacity: 0.5;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 16.3rem;
-      height: 0.2rem;
-      bottom: -1rem;
-      background-color: var(--moderate-cyan);
-    }
-  }
-
-  .anchor {
-    font-size: 1.5rem;
-    color: var(--moderate-cyan);
-    text-decoration: none;
-
-    &:visited {
-      color: var(--moderate-cyan);
-    }
   }
 
   .image-container {

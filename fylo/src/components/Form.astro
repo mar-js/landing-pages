@@ -1,16 +1,24 @@
 ---
-const { formBtn, placeholder, widthInput, textBtn } = Astro.props
+import Btn from "./Btn.astro"
+
+const { alternative, formBtn, placeholder, widthInput, textBtn } = Astro.props
+const justifyContentContainer = alternative ? "center" : "flex-start"
+const widthInputMd = alternative ? "auto" : "100% !important"
 ---
 
 <form id={formBtn} action="POST" class="form-container">
-  <input class="input" type="email" name="email" id="email" placeholder={placeholder} />
-  <button class="button" form={formBtn} type="submit">{textBtn}</button>
+  {
+    !alternative && (
+      <input class="input" type="email" name="email" id="email" placeholder={placeholder} />
+    )
+  }
+  <Btn alternative={alternative} textBtn={textBtn} formBtn={formBtn} />
 </form>
 
-<style define:vars={{ widthInput: widthInput ?? "auto" }}>
+<style define:vars={{ widthInput: widthInput ?? "auto", justifyContentContainer, widthInputMd }}>
   .form-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: var(--justifyContentContainer);
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
@@ -25,26 +33,14 @@ const { formBtn, placeholder, widthInput, textBtn } = Astro.props
     color: var(--light-gray);
   }
 
-  .button {
-    cursor: pointer;
-    color: var(--white);
-    background-color: var(--bright-blue);
-    padding: 1.5rem 5rem;
-  }
-
-  .button:hover {
-    opacity: 0.5;
-  }
-
   @media (width <= 670px) {
     .form-container {
       width: 100%;
       flex-direction: column;
     }
 
-    .input,
-    .button {
-      width: 100% !important;
+    .input {
+      width: var(--widthInputMd);
     }
   }
 </style>

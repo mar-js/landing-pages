@@ -1,20 +1,34 @@
+---
+const { alternative } = Astro.props
+const marginContainer = alternative ? "none" : "0 -6rem"
+const bgColorContainer = alternative ? "var(--dark-blue-fourd)" : "var(--very-dark-blue)"
+---
+
 <footer class="footer-container">
   <slot />
 </footer>
 
-<style is:global>
+<style is:global define:vars={{ marginContainer, bgColorContainer }}>
   .footer-container {
-    margin: 0 -6rem;
+    margin: var(--marginContainer);
     padding: 10rem 6rem;
-    background-color: var(--very-dark-blue);
+    background-color: var(--bgColorContainer);
   }
 
   .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 5rem;
     margin-top: 2rem;
+  }
+
+  @media (width <= 1000px) {
+    .footer-container {
+      padding-inline: 6rem;
+      margin: 0 -6rem;
+    }
   }
 
   @media (width <= 670px) {

@@ -1,18 +1,12 @@
 ---
 import { Image } from "astro:assets"
+import logoAlternative from "@images/logo-alternative.svg"
 import logo from "@images/logo.svg"
 
 const { alternative } = Astro.props
-
-const filterLogo = alternative ? "invert(1) sepia(1) saturate(0) hue-rotate(175deg)" : "none"
+const hrefHome = alternative ? "/fylo-dark" : "/"
 ---
 
-<a href="/">
-  <Image class="logo" src={logo} alt="Logo Fylo" />
+<a href={hrefHome}>
+  <Image class="logo" width={160} src={alternative ? logoAlternative : logo} alt="Logo Fylo" />
 </a>
-
-<style define:vars={{ filterLogo }}>
-  .logo {
-    filter: var(--filterLogo);
-  }
-</style>
