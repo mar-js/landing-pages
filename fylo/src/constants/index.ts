@@ -97,3 +97,18 @@ export const cardData = [
 			"Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared",
 	},
 ];
+
+export const mentionsDarkData = [
+	{
+		id: 1,
+		owner: "Satish Patel",
+	},
+	{
+		id: 2,
+		owner: "Bruce McKenzie",
+	},
+	{
+		id: 3,
+		owner: "Iva Boyd",
+	},
+];
