@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets"
+import imageAnalytic from "@images/illustration-stay-productive.png"
+import Contents from "./Contents.astro"
+import LinkFylo from "./LinkFylo.astro"
+---
+
+<div class="analytic-container">
+  <Image class="image" src={imageAnalytic} alt="Image about people analyzing" />
+  <Contents
+    title="Stay productive, wherever you are"
+    description="Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs."
+    descriptionTwo="Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.">
+    <LinkFylo />
+  </Contents>
+</div>
+
+<style>
+  .analytic-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--dark-blue-secondary);
+    padding: 10rem 8rem;
+    color: var(--light-grayish-blue);
+  }
+
+  .image {
+    aspect-ratio: 41 / 31;
+  }
+
+  @media (width <= 1200px) {
+    .analytic-container {
+      flex-direction: column;
+      padding-inline: 10rem;
+    }
+  }
+
+  @media (width <= 1000px) {
+    .analytic-container {
+      padding-inline: 6rem;
+      margin-inline: -6rem;
+    }
+  }
+
+  @media (width <= 670px) {
+    .analytic-container {
+      padding-inline: 4rem;
+      margin-inline: -4rem;
+    }
+
+    .image {
+      width: 100%;
+    }
+  }
+</style>
