@@ -1,5 +1,5 @@
 ---
-const { alternative, title, description } = Astro.props
+const { alternative, title, description, descriptionTwo } = Astro.props
 const widthContainer = alternative ? "55%" : "45%"
 const textAlignContainer = alternative ? "center" : "left"
 const opacityDescription = alternative ? ".8" : "0.6"
@@ -8,6 +8,7 @@ const opacityDescription = alternative ? ".8" : "0.6"
 <div class="contents-container">
   <h2 class="title">{title}</h2>
   <p class="description">{description}</p>
+  {descriptionTwo && <p class="description">{descriptionTwo}</p>}
   <slot />
 </div>
 
@@ -37,6 +38,10 @@ const opacityDescription = alternative ? ".8" : "0.6"
   @media (width <= 670px) {
     .contents-container {
       text-align: center;
+    }
+
+    .description {
+      text-align: left;
     }
   }
 </style>
