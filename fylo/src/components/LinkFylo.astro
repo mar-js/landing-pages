@@ -1,11 +1,13 @@
 ---
 import { Image } from "astro:assets"
+import arrowAlternative from "@images/icon-arrow-alternative.svg"
 import arrow from "@images/icon-arrow.svg"
+const { alternative } = Astro.props
 ---
 
 <div class="anchor-container">
   <a class="anchor" href="/">See how Fylo works</a>
-  <Image class="arrow" src={arrow} alt="Arrow" />
+  <Image class="arrow" src={alternative ? arrowAlternative : arrow} alt="Arrow" />
 </div>
 
 <style>
