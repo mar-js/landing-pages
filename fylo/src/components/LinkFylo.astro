@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets"
+import arrow from "@images/icon-arrow.svg"
+---
+
+<div class="anchor-container">
+  <a class="anchor" href="/">See how Fylo works</a>
+  <Image class="arrow" src={arrow} alt="Arrow" />
+</div>
+
+<style>
+  .anchor-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 1rem;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16.3rem;
+      height: 0.2rem;
+      bottom: -1rem;
+      background-color: var(--moderate-cyan);
+    }
+  }
+
+  .anchor {
+    font-size: 1.5rem;
+    color: var(--moderate-cyan);
+    text-decoration: none;
+
+    &:visited {
+      color: var(--moderate-cyan);
+    }
+  }
+</style>
