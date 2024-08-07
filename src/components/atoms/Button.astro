@@ -1,0 +1,20 @@
+---
+import type { Size } from "@types"
+
+interface Props {
+  isRounded?: boolean
+  bgColor: string
+  borderColor: string
+  color: string
+  size: Size
+  padding: string
+}
+
+const { bgColor, borderColor, isRounded, color, size, padding } = Astro.props
+---
+
+<button
+  class=`bg-${bgColor} text-${color} border ${isRounded ? "rounded-full" : "rounded-none"} border-${borderColor} ${size} ${padding}`
+  type="button">
+  <slot />
+</button>
