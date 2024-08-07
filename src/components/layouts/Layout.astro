@@ -17,26 +17,17 @@ const { title, description, bgColor } = Astro.props
     <meta name="og:title" content={title} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class=`bg-${bgColor}`>
     <slot />
   </body>
 </html>
 
-<style is:global define:vars={{ bgColor }}>
-  :root {
-    --pink: #ff52bf;
-    --light-pink: #ff8fd8;
-    --light-red: #ff4242;
-    --very-dark-cyan: #00252e;
-    --very-pale-blue: #f5faff;
-  }
-
+<style is:global>
   html {
     font-size: 10px;
   }
 
   body {
     font-family: "Poppins", sans-serif;
-    background-color: var(--bgColor);
   }
 </style>
