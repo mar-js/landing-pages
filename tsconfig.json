@@ -11,6 +11,7 @@
       "@components/layouts/*": ["src/components/layouts/*"],
       "@components/templates/*": ["src/components/templates/*"],
       "@pages/*": ["src/pages/*"],
+      "@types": ["src/types/index.ts"],
     },
   }
 }
