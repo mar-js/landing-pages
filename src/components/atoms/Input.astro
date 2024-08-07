@@ -1,0 +1,21 @@
+---
+interface Props {
+  name: string
+  placeholder: string
+  width: string
+  padding: string
+  margin: string
+  bgColor: string
+  color: string
+}
+
+const { name, placeholder, width, padding, margin, bgColor, color } = Astro.props
+---
+
+<input
+  class=`${width} ${padding} ${margin} bg-${bgColor || "white"} text-${color || "black"} placeholder:text-${color}`
+  type="text"
+  name={name}
+  id={name}
+  placeholder={placeholder}
+/>
