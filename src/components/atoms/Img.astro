@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets"
+import type { ImageMetadata } from "astro"
+
+interface Props {
+  src: ImageMetadata
+  title: string
+}
+
+const { src, title } = Astro.props
+---
+
+<Image class="aspect-auto" src={src} alt={title} title={title} />
