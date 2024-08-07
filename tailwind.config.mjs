@@ -2,14 +2,15 @@
 export default {
 	content: ["./src/**/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
-		colors: {
-			pink: "#ff52bf",
-			"light-pink": "#ff8fd8",
-			"light-red": "#ff4242",
-			"very-dark-cyan": "#00252e",
-			"very-pale-blue": "#f5faff",
+		extend: {
+			colors: {
+				customPink: "#ff52bf",
+				customLightPink: "#ff8fd8",
+				customLightRed: "#ff4242",
+				customVeryDarkCyan: "#00252e",
+				customVeryPaleBlue: "#f5faff",
+			},
 		},
-		extend: {},
 	},
 	plugins: [],
 };
