@@ -1,0 +1,13 @@
+---
+import type { Size } from "@types"
+
+interface Props {
+  color: string
+  margin: string
+  size: Size
+}
+
+const { color, margin, size } = Astro.props
+---
+
+<h3 class=`text-${color} ${margin} ${size} font-normal`><slot /></h3>
