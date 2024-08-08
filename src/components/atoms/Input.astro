@@ -13,7 +13,7 @@ const { name, placeholder, width, padding, margin, bgColor, color } = Astro.prop
 ---
 
 <input
-  class=`${width} ${padding} ${margin} bg-${bgColor || "white"} text-${color || "black"} placeholder:text-${color}`
+  class=`${width} ${padding} ${margin} ${bgColor} ${color} placeholder:${color}`
   type="text"
   name={name}
   id={name}
