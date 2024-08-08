@@ -1,0 +1,15 @@
+---
+import Img from "@components/atoms/Img.astro"
+
+interface Props {
+  src: ImageMetadata
+  title: string
+  href: string
+}
+
+const { href, src, title } = Astro.props
+---
+
+<a class="hover:opacity-50" href={href}>
+  <Img src={src} title={title} />
+</a>
