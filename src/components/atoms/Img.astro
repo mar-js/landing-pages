@@ -5,9 +5,10 @@ import type { ImageMetadata } from "astro"
 interface Props {
   src: ImageMetadata
   title: string
+  className: string
 }
 
-const { src, title } = Astro.props
+const { src, title, className } = Astro.props
 ---
 
-<Image class="aspect-auto w-44" src={src} alt={title} title={title} />
+<Image class=`aspect-auto w-44  ${className}` src={src} alt={title} title={title} />

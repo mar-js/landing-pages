@@ -2,20 +2,10 @@
 interface Props {
   name: string
   placeholder: string
-  width: string
-  padding: string
-  margin: string
-  bgColor: string
-  color: string
+  className: string
 }
 
-const { name, placeholder, width, padding, margin, bgColor, color } = Astro.props
+const { name, placeholder, className } = Astro.props
 ---
 
-<input
-  class=`${width} ${padding} ${margin} ${bgColor} ${color} placeholder:${color}`
-  type="text"
-  name={name}
-  id={name}
-  placeholder={placeholder}
-/>
+<input class={className} type="text" name={name} id={name} placeholder={placeholder} />

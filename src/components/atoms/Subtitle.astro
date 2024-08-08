@@ -1,13 +1,9 @@
 ---
-import type { Size } from "@types"
-
 interface Props {
-  color: string
-  margin: string
-  size: Size
+  className: string
 }
 
-const { color, margin, size } = Astro.props
+const { className } = Astro.props
 ---
 
-<h3 class=`${color} ${margin} ${size} font-normal`><slot /></h3>
+<h3 class=`${className} font-normal`><slot /></h3>

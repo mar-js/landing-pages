@@ -1,20 +1,14 @@
 ---
-import type { Size } from "@types"
-
 interface Props {
   isRounded?: boolean
-  bgColor: string
-  borderColor: string
-  color: string
-  size: Size
-  padding: string
+  className: string
 }
 
-const { bgColor, borderColor, isRounded, color, size, padding } = Astro.props
+const { className, isRounded } = Astro.props
 ---
 
 <button
-  class=`${bgColor} ${color} border ${isRounded ? "rounded-full" : "rounded-none"} ${borderColor} ${size} ${padding} hover:opacity-50`
+  class=`${className} border ${isRounded ? "rounded-full" : "rounded-none"} hover:opacity-50`
   type="button">
   <slot />
 </button>
