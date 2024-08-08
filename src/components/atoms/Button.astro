@@ -14,7 +14,7 @@ const { bgColor, borderColor, isRounded, color, size, padding } = Astro.props
 ---
 
 <button
-  class=`${bgColor} ${color} border ${isRounded ? "rounded-full" : "rounded-none"} ${borderColor} ${size} ${padding}`
+  class=`${bgColor} ${color} border ${isRounded ? "rounded-full" : "rounded-none"} ${borderColor} ${size} ${padding} hover:opacity-50`
   type="button">
   <slot />
 </button>
