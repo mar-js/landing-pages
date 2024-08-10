@@ -1,0 +1,17 @@
+---
+import Description from "@components/atoms/Description.astro"
+import Title from "@components/atoms/Title.astro"
+
+interface Props {
+  className: string
+  title: string
+  description: string
+}
+
+const { className, title, description } = Astro.props
+---
+
+<div class={className}>
+  <Title className=" mb-5 text-4xl sm:text-5xl">{title}</Title>
+  <Description className="text-xl sm:text-2xl sm:px-32 md:px-52">{description}</Description>
+</div>
