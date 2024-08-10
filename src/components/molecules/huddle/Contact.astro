@@ -1,0 +1,28 @@
+---
+import huddle from "@assets/icons/huddle.svg"
+import email from "@assets/icons/icon-email.svg"
+import phone from "@assets/icons/icon-phone.svg"
+import Description from "@components/atoms/Description.astro"
+import Img from "@components/atoms/Img.astro"
+import Logo from "@components/molecules/Logo.astro"
+import Socials from "@components/molecules/Socials.astro"
+---
+
+<div class="w-full h-auto sm:w-96">
+  <Logo isAlternative title="Logo of Huddle" src={huddle} href="/huddle" />
+  <Description className="text-customVeryPaleBlue mt-5 mb-10 font-normal"
+    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur natus accusamus iste impedit
+    ab, eligendi ullam tenetur.</Description
+  >
+  <ul class="flex flex-col gap-5 my-10">
+    <li class="text-customVeryPaleBlue flex justify-start items-center gap-5">
+      <Img className="size-5" src={phone} title="Phone" />
+      <span>Phone: +1-543-123-4567</span>
+    </li>
+    <li class="text-customVeryPaleBlue flex justify-start items-center gap-5">
+      <Img className="size-5" src={email} title="Phone" />
+      <span>example@company.com</span>
+    </li>
+  </ul>
+  <Socials />
+</div>
