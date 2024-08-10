@@ -1,0 +1,39 @@
+---
+import Description from "@components/atoms/Description.astro"
+import Img from "@components/atoms/Img.astro"
+import Subtitle from "@components/atoms/Subtitle.astro"
+
+interface Props {
+  isAlternative?: boolean
+  image: ImageMetadata
+  title: string
+  description: string
+  waveTop?: ImageMetadata
+  waveBottom?: ImageMetadata
+}
+
+const { isAlternative, image, title, description, waveTop, waveBottom } = Astro.props
+---
+
+<figure
+  class=`relative ${isAlternative ? "bg-white" : "bg-customVeryPaleBlue"} my-48 py-20 flex flex-col items-center justify-center text-center ${isAlternative ? "sm:flex-row" : "sm:flex-row-reverse"} sm:gap-44 -mx-10 sm:-mx-14 md:-mx-20 px-10 sm:px-14 md:px-20`>
+  {
+    waveTop && (
+      <Img className="absolute -top-20 left-0 right-0 w-full h-20" src={waveTop} title="Wave Top" />
+    )
+  }
+  <Img className="w-3/4 sm:w-2/5" src={image} title={title} />
+  <figcaption class="text-customVeryDarkCyan text-center sm:text-left">
+    <Subtitle className="mt-14 mb-5 text-3xl sm:text-4xls font-semibold">{title}</Subtitle>
+    <Description className="text-base sm:text-lg font-normal">{description}</Description>
+  </figcaption>
+  {
+    waveBottom && (
+      <Img
+        className="absolute left-0 -bottom-20  right-0 w-full h-20"
+        src={waveBottom}
+        title="Wave Bottom"
+      />
+    )
+  }
+</figure>
