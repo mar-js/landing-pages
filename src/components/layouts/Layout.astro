@@ -18,7 +18,8 @@ const { title, description, bgColor } = Astro.props
     <meta name="og:title" content={title} />
     <title>{title}</title>
   </head>
-  <body class=`bg-${bgColor}`>
+  <body
+    class=`bg-${bgColor} pt-10 px-10 my-0 mx-auto max-w-screen-lg sm:pt-14 sm:px-14 md:pt-20 md:px-20`>
     <slot />
   </body>
 </html>
@@ -43,5 +44,11 @@ const { title, description, bgColor } = Astro.props
   span,
   input {
     font-family: "Open Sans Variable", sans-serif;
+  }
+
+  @media (width <= 670px) {
+    html {
+      font-size: 9px;
+    }
   }
 </style>
