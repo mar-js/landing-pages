@@ -1,0 +1,18 @@
+---
+import mainImage from "@assets/images/screen-mockups.svg"
+import Button from "@components/atoms/Button.astro"
+import Img from "@components/atoms/Img.astro"
+import Information from "@huddle/molecules/Information.astro"
+---
+
+<div class="flex flex-col items-center">
+  <div class="mt-40 mb-16 text-center">
+    <Information />
+    <Button
+      isRounded
+      className="bg-customPink text-customVeryPaleBlue border-customPink text-lg py-4 px-20 shadow-xl">
+      Get Started For Free</Button
+    >
+  </div>
+  <Img className="w-full sm:w-9/12" src={mainImage} title="Main image of Huddle" />
+</div>
