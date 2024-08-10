@@ -1,0 +1,33 @@
+---
+import waveBottom1 from "@assets/images/bg-section-bottom-desktop-1.svg"
+import waveBottom2 from "@assets/images/bg-section-bottom-desktop-2.svg"
+import waveTop1 from "@assets/images/bg-section-top-desktop-1.svg"
+import waveTop2 from "@assets/images/bg-section-top-desktop-2.svg"
+import flowingConversations from "@assets/images/illustration-flowing-conversation.svg"
+import growTogether from "@assets/images/illustration-grow-together.svg"
+import yourUsers from "@assets/images/illustration-your-users.svg"
+import Analyst from "@huddle/molecules/Analyst.astro"
+---
+
+<>
+  <Analyst
+    title="Grow Together"
+    description="Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form."
+    image={growTogether}
+    waveTop={waveTop1}
+    waveBottom={waveBottom1}
+  />
+  <Analyst
+    isAlternative
+    title="Flowing Conversations"
+    description="You wouldn't paginate a conversation in real life, so why do it online?. Our threads have just-in-time loading for a more natural flow."
+    image={flowingConversations}
+  />
+  <Analyst
+    title="Your Users"
+    description="It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately."
+    image={yourUsers}
+    waveTop={waveTop2}
+    waveBottom={waveBottom2}
+  />
+</>
