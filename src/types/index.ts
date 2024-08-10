@@ -8,3 +8,5 @@ export type Size =
 	| "text-3xl"
 	| "text-4xl"
 	| "text-5xl";
+
+export type ButtonTypes = "button" | "submit" | "reset" | null | undefined;
