@@ -19,7 +19,7 @@ const { title, description, bgColor } = Astro.props
     <title>{title}</title>
   </head>
   <body
-    class=`bg-${bgColor} pt-10 px-10 my-0 mx-auto max-w-screen-lg sm:pt-14 sm:px-14 md:pt-20 md:px-20`>
+    class=`${bgColor} pt-10 px-10 my-0 mx-auto max-w-screen-lg sm:pt-14 sm:px-14 md:pt-20 md:px-20`>
     <slot />
   </body>
 </html>
