@@ -1,0 +1,14 @@
+---
+import satish from "@assets/images/profile-1.jpg"
+import bruce from "@assets/images/profile-2.jpg"
+import iva from "@assets/images/profile-3.jpg"
+import Card from "@fylo/molecules/Card.astro"
+---
+
+<div class="bg-customDarkBlueOther pt-48 -mx-10 sm:-mx-14 md:-mx-20 px-10 sm:px-14 md:px-20">
+  <div class="relative w-full flex flex-wrap justify-center sm:justify-around items-center gap-10">
+    <Card isFirst image={satish} user="Satish Patel" />
+    <Card image={bruce} user="Bruce McKenzie" />
+    <Card image={iva} user="Iva Boyd" />
+  </div>
+</div>
