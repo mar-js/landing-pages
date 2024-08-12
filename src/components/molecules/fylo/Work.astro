@@ -7,29 +7,25 @@ import Subtitle from "@components/atoms/Subtitle.astro"
 ---
 
 <>
-  <Img
-    src={work}
-    title="Stay productive, wherever you are"
-    className="w-[27rem] sm:w-2/5 h-auto mb-20"
-  />
-  <div class="w-[27rem] sm:w-2/4 flex flex-col gap-10">
-    <Subtitle className="text-2xl sm:text-3xl font-semibold"
+  <Img src={work} title="Stay productive, wherever you are" className="sm:w-[40rem] h-auto mb-20" />
+  <div class="sm:w-[50rem] flex flex-col gap-10">
+    <Subtitle className="text-4xl sm:text-3xl font-semibold"
       >Stay productive, wherever you are</Subtitle
     >
-    <Description className="text-normal text-lg"
+    <Description className="text-normal text-2xl"
       >Never let location be an issue when accessing your files. Fylo has you covered for all of
       your file storage needs.</Description
     >
-    <Description className="text-normal text-lg"
+    <Description className="text-normal text-2xl"
       >Securely share files and folders with friends, family and colleagues for live collaboration.
       No email attachments required.</Description
     >
-    <div class="w-[11.7rem]">
-      <a href="/" class="w-full flex justify-start items-center gap-2 text-customCyan mb-2">
+    <div class="w-[14rem]">
+      <a href="/" class="w-full text-xl flex justify-start items-center gap-2 text-customCyan mb-2">
         See how fylo works
         <Img className="size-auto" src={arrow} title="Arrow icon" />
       </a>
-      <hr class="bg-customCyan w-full h-0.5" />
+      <hr class="bg-customCyan w-full h-1" />
     </div>
   </div>
 </>

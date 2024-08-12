@@ -5,13 +5,13 @@ import Information from "@components/molecules/Information.astro"
 ---
 
 <div
-  class="relative flex justify-center items-center py-28 -mx-10 sm:-mx-14 md:-mx-20 px-10 sm:px-14 md:px-20">
+  class="relative flex justify-center items-center pt-96 pb-48 -mx-10 sm:-mx-14 md:-mx-20 px-10 sm:px-14 md:px-20">
   <div
     class="w-full h-2/4 absolute -z-10 top-0 bg-gradient-to-b from-customDarkBlueOther to-customDarkBlueMain">
   </div>
-  <div class="sm:w-5/6 text-white text-center bg-customDarkBlueOther p-10 shadow-xl">
+  <div class="sm:w-5/6 text-white text-center bg-customDarkBlueOther p-20 shadow-xl">
     <Information
-      className="mb-10 text-white"
+      className="mb-20 text-white"
       title="Get early access today"
       description="It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you."
     />
@@ -19,11 +19,11 @@ import Information from "@components/molecules/Information.astro"
       <Input
         name="email"
         placeholder="email@example.com"
-        className="bg-white w-full sm:w-[42rem] text-base py-5 px-10 rounded-full"
+        className="bg-white w-full sm:w-[50rem] text-2xl py-6 px-10 rounded-full"
       />
       <Button
         isRounded
-        className="w-full sm:w-auto bg-gradient-to-r from-customCyan to-customBlue text-customVeryPaleBlue border-customBlue text-lg py-5 px-16">
+        className="bg-gradient-to-r from-customCyan to-customBlue text-customVeryPaleBlue border-customBlue text-2xl py-6 px-28 shadow-xl">
         Get Started For Free</Button
       >
     </div>
