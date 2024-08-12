@@ -1,0 +1,18 @@
+---
+import fylo from "@assets/icons/fylo.svg"
+import Logo from "@components/molecules/Logo.astro"
+import Socials from "@components/molecules/Socials.astro"
+import Contact from "@fylo/molecules/Contact.astro"
+import List from "@fylo/molecules/List.astro"
+---
+
+<div class="bg-customDarkBlueFooter -mx-10 sm:-mx-14 md:-mx-20 px-10 sm:px-14 md:px-20 py-20">
+  <Logo title="Logo of Fylo" src={fylo} href="/fylo" />
+  <div class="flex flex-col sm:flex-row items-start sm:justify-between gap-20 mt-10">
+    <Contact />
+    <List />
+    <div class="flex items-center justify-cente sm:justify-end">
+      <Socials isRounded />
+    </div>
+  </div>
+</div>
