@@ -1,0 +1,29 @@
+---
+import waveTop from "@assets/images/bg-curvy-desktop.svg"
+import mainImage from "@assets/images/illustration-intro.png"
+import Button from "@components/atoms/Button.astro"
+import Img from "@components/atoms/Img.astro"
+import Information from "@components/molecules/Information.astro"
+---
+
+<div class="flex flex-col items-center mt-28">
+  <Img className="w-full sm:w-3/6" src={mainImage} title="Main image of Huddle" />
+  <div
+    class="relative mt-28 text-center bg-customDarkBlueMain md:bg-transparent -mx-10 sm:-mx-14 md:-mx-20 px-10 sm:px-14 md:px-20">
+    <Img
+      className="absolute -top-44 left-0 right-0 w-full h-44 -z-10 md:top-0 md:h-full"
+      src={waveTop}
+      title="Wave Top"
+    />
+    <Information
+      className="mb-10 text-white"
+      title="All your files in one secure location, accessible anywhere"
+      description="Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers."
+    />
+    <Button
+      isRounded
+      className="bg-gradient-to-r from-customCyan to-customBlue text-customVeryPaleBlue border-customBlue text-lg py-4 px-20 shadow-xl">
+      Get Started For Free</Button
+    >
+  </div>
+</div>
