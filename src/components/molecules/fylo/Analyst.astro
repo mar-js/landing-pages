@@ -1,0 +1,19 @@
+---
+import Description from "@components/atoms/Description.astro"
+import Img from "@components/atoms/Img.astro"
+import Subtitle from "@components/atoms/Subtitle.astro"
+
+interface Props {
+  image: ImageMetadata
+  title: string
+  description: string
+}
+
+const { image, title, description } = Astro.props
+---
+
+<div class="text-center w-[27rem]">
+  <Img className="inline-block size-24 object-contain" src={image} title={title} />
+  <Subtitle className="text-2xl sm:text-3xl my-5 font-semibold">{title}</Subtitle>
+  <Description className="text-lg sm:text-xl text-normal">{description}</Description>
+</div>
