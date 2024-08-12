@@ -1,0 +1,26 @@
+---
+import email from "@assets/icons/icon-email.svg"
+import location from "@assets/icons/icon-location.svg"
+import phone from "@assets/icons/icon-phone.svg"
+import Img from "@components/atoms/Img.astro"
+---
+
+<div class="w-full h-auto sm:w-[30rem]">
+  <ul class="flex flex-col md:flex-wrap gap-5">
+    <li class="text-customVeryPaleBlue flex justify-start items-center gap-5 w-[27rem]">
+      <Img className="size-5" src={location} title="Location" />
+      <span class="text-base font-light"
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur natus accusamus iste
+        impedit ab, eligendi ullam tenetur.</span
+      >
+    </li>
+    <li class="text-customVeryPaleBlue flex justify-start items-center gap-5">
+      <Img className="size-5" src={phone} title="Phone" />
+      <span class="text-base font-light">+1-543-123-4567</span>
+    </li>
+    <li class="text-customVeryPaleBlue flex justify-start items-center gap-5">
+      <Img className="size-5" src={email} title="Email" />
+      <span class="text-base font-light">example@company.com</span>
+    </li>
+  </ul>
+</div>
