@@ -1,0 +1,38 @@
+---
+import Footer from "@components/layouts/Footer.astro"
+import Header from "@components/layouts/Header.astro"
+import Layout from "@components/layouts/Layout.astro"
+import Main from "@components/layouts/Main.astro"
+import Section from "@components/layouts/Section.astro"
+import CardFloat from "@components/organisms/fylo/CardFloat.astro"
+import Analysts from "@fylo/organisms/Analysts.astro"
+import Cards from "@fylo/organisms/Cards.astro"
+import Footers from "@fylo/organisms/Footers.astro"
+import Headers from "@fylo/organisms/Headers.astro"
+import Hero from "@fylo/organisms/Hero.astro"
+import Works from "@fylo/organisms/Works.astro"
+---
+
+<Layout title="Fylo Page" description="Fylo" bgColor="bg-customDarkBlueOther">
+  <Header>
+    <Headers />
+  </Header>
+  <Main>
+    <Hero />
+  </Main>
+  <Section>
+    <Analysts />
+  </Section>
+  <Section>
+    <Works />
+  </Section>
+  <Section>
+    <Cards />
+  </Section>
+  <Section>
+    <CardFloat />
+  </Section>
+  <Footer>
+    <Footers />
+  </Footer>
+</Layout>
