@@ -1,8 +1,8 @@
 ---
 import mainImage from "@assets/images/screen-mockups.svg"
-import Button from "@components/atoms/Button.astro"
 import Img from "@components/atoms/Img.astro"
 import Information from "@components/molecules/Information.astro"
+import Btn from "@huddle/molecules/Btn.astro"
 ---
 
 <div class="flex flex-col items-center">
@@ -12,11 +12,7 @@ import Information from "@components/molecules/Information.astro"
       title="Build The Community Your Fans Will Love"
       description="Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion."
     />
-    <Button
-      isRounded
-      className="bg-customPink text-customVeryPaleBlue border-customPink text-2xl py-6 px-28 shadow-xl">
-      Get Started For Free</Button
-    >
+    <Btn />
   </div>
   <Img className="w-full sm:w-9/12" src={mainImage} title="Main image of Huddle" />
 </div>

@@ -1,9 +1,9 @@
 ---
 import waveTop from "@assets/images/bg-curvy-desktop.svg"
 import mainImage from "@assets/images/illustration-intro.png"
-import Button from "@components/atoms/Button.astro"
 import Img from "@components/atoms/Img.astro"
 import Information from "@components/molecules/Information.astro"
+import Btn from "@fylo/molecules/Btn.astro"
 ---
 
 <div class="flex flex-col items-center mt-28">
@@ -20,10 +20,6 @@ import Information from "@components/molecules/Information.astro"
       title="All your files in one secure location, accessible anywhere"
       description="Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers."
     />
-    <Button
-      isRounded
-      className="bg-gradient-to-r from-customCyan to-customBlue text-customVeryPaleBlue border-customBlue text-2xl py-6 px-28 shadow-xl">
-      Get Started For Free</Button
-    >
+    <Btn />
   </div>
 </div>

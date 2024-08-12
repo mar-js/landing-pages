@@ -1,7 +1,7 @@
 ---
-import Button from "@components/atoms/Button.astro"
 import Input from "@components/atoms/Input.astro"
 import Information from "@components/molecules/Information.astro"
+import Btn from "@fylo/molecules/Btn.astro"
 ---
 
 <div
@@ -21,12 +21,8 @@ import Information from "@components/molecules/Information.astro"
         placeholder="email@example.com"
         className="bg-white w-full sm:w-[50rem] text-2xl py-6 px-10 rounded-full"
       />
-      <Button
-        isRounded
-        className="bg-gradient-to-r from-customCyan to-customBlue text-customVeryPaleBlue border-customBlue text-2xl py-6 px-28 shadow-xl">
-        Get Started For Free</Button
-      >
+      <Btn />
     </div>
+    <div class="w-full h-2/4 absolute -z-10 bottom-0 bg-customDarkBlueFooter"></div>
   </div>
-  <div class="w-full h-2/4 absolute -z-10 bottom-0 bg-customDarkBlueFooter"></div>
 </div>
