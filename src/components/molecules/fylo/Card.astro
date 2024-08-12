@@ -1,0 +1,30 @@
+---
+import quote from "@assets/images/bg-quotes.png"
+import Description from "@components/atoms/Description.astro"
+import Img from "@components/atoms/Img.astro"
+import Subtitle from "@components/atoms/Subtitle.astro"
+import type { ImageMetadata } from "astro"
+
+interface Props {
+  isFirst?: boolean
+  image: ImageMetadata
+  user: string
+}
+
+const { isFirst, image, user } = Astro.props
+---
+
+<article class="relative w-[27.5rem] bg-customDarkBlueTestimonials text-white py-10 px-8 z-20">
+  {isFirst && <Img className="absolute w-8 -top-6 left-0" src={quote} title="Quote" />}
+  <Description className="text-sm font-light mb-8 leading-7"
+    >Fylo has improved our team productivity by an order of magnitude. Since making the switch our
+    team has become a well-oiled collaboration machine</Description
+  >
+  <div class="flex gap-3 items-center justify-start">
+    <Img className="rounded-full size-10" src={image} title={user} />
+    <div class="flex flex-col gap-1">
+      <Subtitle className="text-sm font-semibold">{user}</Subtitle>
+      <span class="text-xs font-extralight">Founder & CEO, Huddle</span>
+    </div>
+  </div>
+</article>
