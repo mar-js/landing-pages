@@ -5,22 +5,22 @@ import Input from "@components/atoms/Input.astro"
 import Subtitle from "@components/atoms/Subtitle.astro"
 ---
 
-<div class="w-full h-auto sm:w-[35rem]">
-  <Subtitle className="text-customVeryPaleBlue font-semibold text-2xl">NEWSLETTER</Subtitle>
-  <Description className="text-customVeryPaleBlue my-8 font-normal sm:pr-36"
+<div class="w-full h-auto sm:w-[40rem]">
+  <Subtitle className="text-customVeryPaleBlue font-semibold text-4xl">NEWSLETTER</Subtitle>
+  <Description className="text-customVeryPaleBlue text-2xl my-8 font-normal sm:pr-36"
     >To recieve tips on how to grow your community, sign up to our weekly newsletter. We'll never
     send you spam or pass on your email address</Description
   >
   <form
     action="POST"
-    class="flex flex-col sm:flex-row items-end justify-center sm:items-center gap-5">
+    class="flex flex-col sm:flex-row items-end justify-center sm:justify-between sm:items-center gap-5">
     <Input
       name="email"
       placeholder=""
-      className="py-4 w-full sm:w-96 bg-customVeryPaleBlue broder-none outline-none rounded"
+      className="py-6 w-full sm:w-96 bg-customVeryPaleBlue broder-none outline-none rounded"
     />
     <Button
-      className="py-2 sm:py-3.5 px-10 text-customVeryPaleBlue font-normal text-lg bg-customPink border-customPink rounded-md"
+      className="py-4 px-12 text-customVeryPaleBlue font-normal text-2xl bg-customPink border-customPink rounded-md"
       >Subscribe</Button
     >
   </form>

@@ -14,5 +14,5 @@ const { href, src, title, isAlternative } = Astro.props
 <a
   class=`hover:opacity-50 ${isAlternative ? "invert sepia saturate-0 hue-rotate-180" : ""}`
   href={href}>
-  <Img className="w-44" src={src} title={title} />
+  <Img className="w-64" src={src} title={title} />
 </a>

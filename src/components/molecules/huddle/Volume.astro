@@ -13,8 +13,8 @@ interface Props {
 const { image, title, description } = Astro.props
 ---
 
-<div class="w-auto flex flex-col gap-3">
+<div class="w-60 sm:w-auto flex flex-col gap-3">
   <Img className="w-10" src={image} title={title} />
-  <Subtitle className="text-customVeryDarkCyan text-6xl font-semibold">{title}</Subtitle>
-  <Description className="text-lg text-customVeryDarkCyan">{description}</Description>
+  <Subtitle className="text-customVeryDarkCyan text-7xl font-semibold">{title}</Subtitle>
+  <Description className="text-2xl text-customVeryDarkCyan">{description}</Description>
 </div>
