@@ -1,0 +1,31 @@
+---
+import accessAnywhere from "@assets/icons/icon-access-anywhere.svg"
+import anyFile from "@assets/icons/icon-any-file.svg"
+import collaboration from "@assets/icons/icon-collaboration.svg"
+import security from "@assets/icons/icon-security.svg"
+import Analyst from "@components/molecules/fylo/Analyst.astro"
+---
+
+<div
+  class="flex flex-wrap gap-36 sm:gap-12 md:gap-20 justify-center sm:justify-around items-center py-64 text-white bg-customDarkBlueMain -mx-10 sm:-mx-14 md:-mx-20 px-10 sm:px-14 md:px-20">
+  <Analyst
+    image={accessAnywhere}
+    title="Access your files, anywhere"
+    description="The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere"
+  />
+  <Analyst
+    image={security}
+    title="Security you can trust"
+    description="2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files."
+  />
+  <Analyst
+    image={collaboration}
+    title="Real-time collaboration"
+    description="Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required"
+  />
+  <Analyst
+    image={anyFile}
+    title="Store any type of file"
+    description="Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared."
+  />
+</div>
