@@ -1,5 +1,6 @@
 ---
 import Input from "@components/atoms/Input.astro"
+import Typography from "@components/atoms/Typography.astro"
 import Information from "@components/molecules/Information.astro"
 import Btn from "@fylo/molecules/Btn.astro"
 ---
@@ -10,11 +11,15 @@ import Btn from "@fylo/molecules/Btn.astro"
     class="w-full h-2/4 absolute -z-10 top-0 bg-gradient-to-b from-customDarkBlueOther to-customDarkBlueMain">
   </div>
   <div class="sm:w-5/6 text-white text-center bg-customDarkBlueOther p-20 shadow-xl">
-    <Information
-      className="mb-20 text-white"
-      title="Get early access today"
-      description="It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you."
-    />
+    <div class="mb-20 text-white">
+      <Typography tag="h2" className="mb-5 text-5xl font-semibold"
+        >Get early access today</Typography
+      >
+      <Typography tag="p" className="text-3xl sm:px-16"
+        >It only takes a minute to sign up and our free starter tier is extremely generous. If you
+        have any questions, our support team would be happy to help you.</Typography
+      >
+    </div>
     <div class="flex flex-wrap sm:justify-around gap-10 sm:gap-7">
       <Input
         name="email"

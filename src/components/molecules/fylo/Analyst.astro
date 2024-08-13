@@ -11,8 +11,8 @@ interface Props {
 const { image, title, description } = Astro.props
 ---
 
-<div class="text-center w-[27rem]">
+<div class="text-center w-[28rem]">
   <Img className="inline-block size-24 object-contain" src={image} title={title} />
-  <Typography tag="h2" className="text-3xl my-5 font-semibold">{title}</Typography>
-  <Typography tag="p" className="text-xl text-normal">{description}</Typography>
+  <Typography tag="h4" className="text-4xl my-5 font-semibold">{title}</Typography>
+  <Typography tag="p" className="text-2xl text-normal">{description}</Typography>
 </div>
