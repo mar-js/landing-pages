@@ -10,3 +10,13 @@ export type Size =
 	| "text-5xl";
 
 export type ButtonTypes = "button" | "submit" | "reset" | null | undefined;
+
+export type TTypography =
+	| "h1"
+	| "h2"
+	| "h3"
+	| "h4"
+	| "h5"
+	| "h6"
+	| "p"
+	| "span";
