@@ -1,24 +1,23 @@
 ---
 import arrow from "@assets/icons/icon-arrow.svg"
 import work from "@assets/images/illustration-stay-productive.png"
-import Description from "@components/atoms/Description.astro"
 import Img from "@components/atoms/Img.astro"
-import Subtitle from "@components/atoms/Subtitle.astro"
+import Typography from "@components/atoms/Typography.astro"
 ---
 
 <>
   <Img src={work} title="Stay productive, wherever you are" className="sm:w-[40rem] h-auto mb-20" />
   <div class="sm:w-[50rem] flex flex-col gap-10">
-    <Subtitle className="text-4xl sm:text-3xl font-semibold"
-      >Stay productive, wherever you are</Subtitle
+    <Typography tag="p" className="text-4xl sm:text-3xl font-semibold"
+      >Stay productive, wherever you are</Typography
     >
-    <Description className="text-normal text-2xl"
+    <Typography tag="p" className="text-normal text-2xl"
       >Never let location be an issue when accessing your files. Fylo has you covered for all of
-      your file storage needs.</Description
+      your file storage needs.</Typography
     >
-    <Description className="text-normal text-2xl"
+    <Typography tag="p" className="text-normal text-2xl"
       >Securely share files and folders with friends, family and colleagues for live collaboration.
-      No email attachments required.</Description
+      No email attachments required.</Typography
     >
     <div class="w-[14rem]">
       <a href="/" class="w-full text-xl flex justify-start items-center gap-2 text-customCyan mb-2">

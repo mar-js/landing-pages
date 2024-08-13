@@ -1,7 +1,6 @@
 ---
-import Description from "@components/atoms/Description.astro"
 import Img from "@components/atoms/Img.astro"
-import Subtitle from "@components/atoms/Subtitle.astro"
+import Typography from "@components/atoms/Typography.astro"
 
 interface Props {
   isAlternative?: boolean
@@ -24,8 +23,10 @@ const { isAlternative, image, title, description, waveTop, waveBottom } = Astro.
   }
   <Img className="w-3/4 sm:w-2/5" src={image} title={title} />
   <figcaption class="text-customVeryDarkCyan text-center sm:text-left">
-    <Subtitle className="mt-14 mb-5 text-5xl sm:text-6xl font-semibold">{title}</Subtitle>
-    <Description className="text-2xl font-normal">{description}</Description>
+    <Typography tag="h3" className="mt-14 mb-5 text-5xl sm:text-6xl font-semibold"
+      >{title}</Typography
+    >
+    <Typography tag="p" className="text-2xl font-normal">{description}</Typography>
   </figcaption>
   {
     waveBottom && (

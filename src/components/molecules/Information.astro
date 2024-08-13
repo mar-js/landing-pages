@@ -1,6 +1,5 @@
 ---
-import Description from "@components/atoms/Description.astro"
-import Title from "@components/atoms/Title.astro"
+import Typography from "@components/atoms/Typography.astro"
 
 interface Props {
   className: string
@@ -12,6 +11,6 @@ const { className, title, description } = Astro.props
 ---
 
 <div class={className}>
-  <Title className=" mb-5 text-5xl sm:text-6xl">{title}</Title>
-  <Description className="text-2xl sm:text-3xl sm:px-16">{description}</Description>
+  <Typography tag="h1" className="mb-5 text-5xl sm:text-6xl">{title}</Typography>
+  <Typography tag="p" className="text-2xl sm:text-3xl sm:px-16">{description}</Typography>
 </div>

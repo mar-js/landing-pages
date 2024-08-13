@@ -1,15 +1,16 @@
 ---
 import Button from "@components/atoms/Button.astro"
-import Description from "@components/atoms/Description.astro"
 import Input from "@components/atoms/Input.astro"
-import Subtitle from "@components/atoms/Subtitle.astro"
+import Typography from "@components/atoms/Typography.astro"
 ---
 
 <div class="w-full h-auto sm:w-[40rem]">
-  <Subtitle className="text-customVeryPaleBlue font-semibold text-4xl">NEWSLETTER</Subtitle>
-  <Description className="text-customVeryPaleBlue text-2xl my-8 font-normal sm:pr-36"
+  <Typography tag="h5" className="text-customVeryPaleBlue font-semibold text-4xl"
+    >NEWSLETTER</Typography
+  >
+  <Typography tag="p" className="text-customVeryPaleBlue text-2xl my-8 font-normal sm:pr-36"
     >To recieve tips on how to grow your community, sign up to our weekly newsletter. We'll never
-    send you spam or pass on your email address</Description
+    send you spam or pass on your email address</Typography
   >
   <form
     action="POST"

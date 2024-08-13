@@ -2,26 +2,26 @@
 import huddle from "@assets/icons/huddle.svg"
 import email from "@assets/icons/icon-email.svg"
 import phone from "@assets/icons/icon-phone.svg"
-import Description from "@components/atoms/Description.astro"
 import Img from "@components/atoms/Img.astro"
+import Typography from "@components/atoms/Typography.astro"
 import Logo from "@components/molecules/Logo.astro"
 import Socials from "@components/molecules/Socials.astro"
 ---
 
 <div class="w-full h-auto sm:w-[30rem]">
   <Logo isAlternative title="Logo of Huddle" src={huddle} href="/huddle" />
-  <Description className="text-customVeryPaleBlue mt-10 mb-20 font-normal text-2xl"
+  <Typography tag="p" className="text-customVeryPaleBlue mt-10 mb-20 font-normal text-2xl"
     >Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur natus accusamus iste impedit
-    ab, eligendi ullam tenetur.</Description
+    ab, eligendi ullam tenetur.</Typography
   >
   <ul class="flex flex-col gap-10 my-20">
-    <li class="text-customVeryPaleBlue flex justify-start items-center gap-6 text-2xl">
+    <li class="text-customVeryPaleBlue flex justify-start items-center gap-6">
       <Img className="w-8" src={phone} title="Phone" />
-      <span>Phone: +1-543-123-4567</span>
+      <Typography tag="span" className="text-2xl">Phone: +1-543-123-4567</Typography>
     </li>
-    <li class="text-customVeryPaleBlue flex justify-start items-center gap-6 text-2xl">
+    <li class="text-customVeryPaleBlue flex justify-start items-center gap-6">
       <Img className="w-8" src={email} title="Phone" />
-      <span>example@company.com</span>
+      <Typography tag="span" className="text-2xl">example@company.com</Typography>
     </li>
   </ul>
   <Socials />

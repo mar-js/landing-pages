@@ -3,24 +3,25 @@ import email from "@assets/icons/icon-email.svg"
 import location from "@assets/icons/icon-location.svg"
 import phone from "@assets/icons/icon-phone.svg"
 import Img from "@components/atoms/Img.astro"
+import Typography from "@components/atoms/Typography.astro"
 ---
 
 <div class="w-full h-auto sm:w-[30rem]">
   <ul class="flex flex-col md:flex-wrap gap-14">
     <li class="text-customVeryPaleBlue flex justify-start items-center gap-5 sm:w-[30rem]">
       <Img className="w-8" src={location} title="Location" />
-      <span class="text-2xl font-light"
+      <Typography tag="span" className="text-2xl font-light"
         >Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur natus accusamus iste
-        impedit ab, eligendi ullam tenetur.</span
+        impedit ab, eligendi ullam tenetur.</Typography
       >
     </li>
     <li class="text-customVeryPaleBlue flex justify-start items-center gap-5">
       <Img className="w-8" src={phone} title="Phone" />
-      <span class="text-2xl font-light">+1-543-123-4567</span>
+      <Typography tag="span" className="text-2xl font-light">+1-543-123-4567</Typography>
     </li>
     <li class="text-customVeryPaleBlue flex justify-start items-center gap-5">
       <Img className="w-8" src={email} title="Email" />
-      <span class="text-2xl font-light">example@company.com</span>
+      <Typography tag="span" className="text-2xl font-light">example@company.com</Typography>
     </li>
   </ul>
 </div>
