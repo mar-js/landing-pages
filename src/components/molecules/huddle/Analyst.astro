@@ -15,7 +15,7 @@ const { isAlternative, image, title, description, waveTop, waveBottom } = Astro.
 ---
 
 <figure
-  class=`relative ${isAlternative ? "bg-white" : "bg-customVeryPaleBlue"} my-48 py-40 flex flex-col items-center justify-center text-center ${isAlternative ? "sm:flex-row" : "sm:flex-row-reverse"} sm:gap-44 -mx-10 sm:-mx-14 md:-mx-20 px-10 sm:px-14 md:px-20`>
+  class=`w-full relative ${isAlternative ? "bg-white" : "bg-customVeryPaleBlue"} my-48 py-40 flex flex-col items-center justify-center text-center ${isAlternative ? "sm:flex-row" : "sm:flex-row-reverse"} sm:gap-44 px-10 sm:px-14 md:px-20`>
   {
     waveTop && (
       <Img className="absolute -top-20 left-0 right-0 w-full h-20" src={waveTop} title="Wave Top" />

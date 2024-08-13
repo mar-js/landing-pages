@@ -1,21 +1,25 @@
 ---
+import Break from "@components/atoms/Break.astro"
 import Input from "@components/atoms/Input.astro"
-import Information from "@components/molecules/Information.astro"
+import Typography from "@components/atoms/Typography.astro"
 import Btn from "@fylo/molecules/Btn.astro"
 ---
 
-<div
-  class="relative flex justify-center items-center pt-96 pb-48 -mx-10 sm:-mx-14 md:-mx-20 px-10 sm:px-14 md:px-20">
+<Break className="relative flex justify-center items-center pt-96 pb-48">
   <div
     class="w-full h-2/4 absolute -z-10 top-0 bg-gradient-to-b from-customDarkBlueOther to-customDarkBlueMain">
   </div>
   <div class="sm:w-5/6 text-white text-center bg-customDarkBlueOther p-20 shadow-xl">
-    <Information
-      className="mb-20 text-white"
-      title="Get early access today"
-      description="It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you."
-    />
-    <div class="flex flex-wrap sm:justify-around gap-10 sm:gap-7">
+    <div class="mb-20 text-white">
+      <Typography tag="h2" className="mb-5 text-5xl font-semibold"
+        >Get early access today</Typography
+      >
+      <Typography tag="p" className="text-3xl sm:px-16"
+        >It only takes a minute to sign up and our free starter tier is extremely generous. If you
+        have any questions, our support team would be happy to help you.</Typography
+      >
+    </div>
+    <div class="flex flex-wrap justify-around gap-10 sm:gap-7">
       <Input
         name="email"
         placeholder="email@example.com"
@@ -23,6 +27,6 @@ import Btn from "@fylo/molecules/Btn.astro"
       />
       <Btn />
     </div>
-    <div class="w-full h-2/4 absolute -z-10 bottom-0 bg-customDarkBlueFooter"></div>
   </div>
-</div>
+  <div class="w-full h-2/4 absolute -z-10 bottom-0 bg-customDarkBlueFooter"></div>
+</Break>
