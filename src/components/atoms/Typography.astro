@@ -1,0 +1,14 @@
+---
+import type { TTypography } from "@types"
+
+interface Props {
+  tag: TTypography
+  className: string
+}
+
+const { tag: Tag, className } = Astro.props
+---
+
+<Tag class={className}>
+  <slot />
+</Tag>
