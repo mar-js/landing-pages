@@ -3,11 +3,12 @@ import accessAnywhere from "@assets/icons/icon-access-anywhere.svg"
 import anyFile from "@assets/icons/icon-any-file.svg"
 import collaboration from "@assets/icons/icon-collaboration.svg"
 import security from "@assets/icons/icon-security.svg"
+import Break from "@components/atoms/Break.astro"
 import Analyst from "@components/molecules/fylo/Analyst.astro"
 ---
 
-<div
-  class="flex flex-wrap gap-36 sm:gap-12 md:gap-20 justify-center sm:justify-around items-center py-64 text-white bg-customDarkBlueMain -mx-10 sm:-mx-14 md:-mx-20 px-10 sm:px-14 md:px-20">
+<Break
+  className="flex flex-wrap gap-36 sm:gap-12 md:gap-20 justify-center sm:justify-around items-center py-64 text-white bg-customDarkBlueMain">
   <Analyst
     image={accessAnywhere}
     title="Access your files, anywhere"
@@ -28,4 +29,4 @@ import Analyst from "@components/molecules/fylo/Analyst.astro"
     title="Store any type of file"
     description="Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared."
   />
-</div>
+</Break>
