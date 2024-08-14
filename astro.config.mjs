@@ -4,8 +4,8 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "http://localhost:4321/",
-	base: "https://github.com/mar-js/mar-js.github.io",
+	site: "https://mar-js.github.io/landing-pages/",
+	base: "/",
 	integrations: [tailwind()],
 	prefetch: true,
 });
