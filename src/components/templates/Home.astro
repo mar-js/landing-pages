@@ -1,0 +1,16 @@
+---
+import Header from "@components/layouts/Header.astro"
+import Layout from "@components/layouts/Layout.astro"
+import Main from "@components/layouts/Main.astro"
+import Headers from "@home/organisms/Headers.astro"
+import Hero from "@home/organisms/Hero.astro"
+---
+
+<Layout title="Home Page" description="Home" bgColor="bg-slate-600">
+  <Header>
+    <Headers />
+  </Header>
+  <Main>
+    <Hero />
+  </Main>
+</Layout>
