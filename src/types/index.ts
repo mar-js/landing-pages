@@ -1,3 +1,5 @@
+import type { ImageMetadata } from "astro";
+
 export type Size =
 	| "text-xs"
 	| "text-sm"
@@ -20,3 +22,9 @@ export type TTypography =
 	| "h6"
 	| "p"
 	| "span";
+
+export interface TPages {
+	id: string;
+	name: string;
+	logo: ImageMetadata;
+}
