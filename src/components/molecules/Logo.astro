@@ -1,5 +1,6 @@
 ---
 import Img from "@components/atoms/Img.astro"
+import Link from "@components/atoms/Link.astro"
 
 interface Props {
   src: ImageMetadata
@@ -11,8 +12,8 @@ interface Props {
 const { href, src, title, isAlternative } = Astro.props
 ---
 
-<a
-  class=`hover:opacity-50 ${isAlternative ? "invert sepia saturate-0 hue-rotate-180" : ""}`
+<Link
+  className=`hover:opacity-50 ${isAlternative ? "invert sepia saturate-0 hue-rotate-180" : ""}`
   href={href}>
   <Img className="w-64" src={src} title={title} />
-</a>
+</Link>

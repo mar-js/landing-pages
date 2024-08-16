@@ -10,6 +10,9 @@
       "@components/organisms/*": ["src/components/organisms/*"],
       "@components/layouts/*": ["src/components/layouts/*"],
       "@components/templates/*": ["src/components/templates/*"],
+      "@home/molecules/*": ["src/components/molecules/home/*"],
+      "@home/organisms/*": ["src/components/organisms/home/*"],
+      "@home/templates/*": ["src/components/templates/home/*"],
       "@huddle/molecules/*": ["src/components/molecules/huddle/*"],
       "@huddle/organisms/*": ["src/components/organisms/huddle/*"],
       "@huddle/templates/*": ["src/components/templates/huddle/*"],
@@ -18,6 +21,7 @@
       "@fylo/templates/*": ["src/components/templates/fylo/*"],
       "@pages/*": ["src/pages/*"],
       "@types": ["src/types/index.ts"],
+      "@constants": ["src/constants/index.ts"],
     },
   }
 }
