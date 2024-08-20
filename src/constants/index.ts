@@ -12,5 +12,6 @@ export const PAGES: TPages[] = [
 		id: "huddle",
 		name: "Huddle",
 		logo: huddle,
+		isAlternative: true,
 	},
 ];
