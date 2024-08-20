@@ -1,6 +1,5 @@
 ---
-import Img from "@components/atoms/Img.astro"
-import Link from "@components/atoms/Link.astro"
+import Logo from "@components/molecules/Logo.astro"
 import type { TPages } from "@types"
 
 interface Props {
@@ -10,15 +9,16 @@ interface Props {
 const { links } = Astro.props
 ---
 
-<ul class="list-disc text-8xl text-white pl-20 sm:pl-16 marker:text-cyan-400">
+<ul class="list-disc text-8xl text-white pl-20 sm:pl-16 marker:text-white">
   {
-    links.map(({ id, name, logo }) => (
+    links.map(({ id, name, logo, isAlternative }) => (
       <li title={id} class="my-32">
-        <Link
-          className="hover:opacity-50"
-          href={new URL(id === "home" ? "" : id, Astro.url).pathname}>
-          <Img src={logo} title={name} className="size-auto" />
-        </Link>
+        <Logo
+          title={name}
+          src={logo}
+          href={new URL(id === "home" ? "" : id, Astro.url).pathname}
+          isAlternative={isAlternative}
+        />
       </li>
     ))
   }
