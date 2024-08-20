@@ -9,10 +9,11 @@ interface Props {
 const { links } = Astro.props
 ---
 
-<ul class="list-disc text-8xl text-white pl-20 sm:pl-16 marker:text-white">
+<ul
+  class="list-disc text-8xl text-white pl-20 sm:pl-16 marker:text-white flex flex-col gap-20 sm:gap-36">
   {
     links.map(({ id, name, logo, isAlternative }) => (
-      <li title={id} class="my-32">
+      <li title={id}>
         <Logo
           title={name}
           src={logo}
