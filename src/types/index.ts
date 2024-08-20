@@ -23,8 +23,9 @@ export type TTypography =
 	| "p"
 	| "span";
 
-export interface TPages {
+export type TPages = {
 	id: string;
 	name: string;
 	logo: ImageMetadata;
-}
+	isAlternative?: boolean;
+};

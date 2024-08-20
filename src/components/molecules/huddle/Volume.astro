@@ -12,10 +12,10 @@ interface Props {
 const { image, title, description } = Astro.props
 ---
 
-<div class="w-60 sm:w-auto flex flex-col gap-3">
+<div class="w-80 sm:w-auto flex flex-col gap-3 justify-center items-start">
   <Img className="w-10" src={image} title={title} />
   <Typography tag="h4" className="text-customVeryDarkCyan text-7xl font-semibold"
     >{title}</Typography
   >
-  <Typography tag="p" className="text-2xl text-customVeryDarkCyan">{description}</Typography>
+  <Typography tag="p" className="text-3xl text-customVeryDarkCyan">{description}</Typography>
 </div>

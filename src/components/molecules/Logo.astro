@@ -12,8 +12,6 @@ interface Props {
 const { href, src, title, isAlternative } = Astro.props
 ---
 
-<Link
-  className=`hover:opacity-50 ${isAlternative ? "invert sepia saturate-0 hue-rotate-180" : ""}`
-  href={href}>
-  <Img className="w-64" src={src} title={title} />
+<Link className=`hover:opacity-50 ${isAlternative ? "brightness-0 invert" : ""}` href={href}>
+  <Img className="w-72" src={src} title={title} />
 </Link>
